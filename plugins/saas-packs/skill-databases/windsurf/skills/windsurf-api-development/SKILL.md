@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Generate API clients and documentation with Cascade AI assistance.
 
+## Overview
+
+This skill enables AI-assisted API development workflows within Windsurf. Cascade can generate type-safe API clients from OpenAPI/Swagger specs, create comprehensive API documentation, design REST and GraphQL schemas, and produce SDKs for multiple languages. It accelerates API development from design through implementation to documentation.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- OpenAPI/Swagger specification or API endpoints
+- Target language runtime (Node.js, Python, etc.)
+- Understanding of API design patterns
+- Documentation requirements defined
+
 ## Directory Structure
 
 ```
@@ -93,22 +105,69 @@ project-root/
 - SDK documentation
 - Changelog generation
 
-## Configuration Steps
+## Instructions
 
 1. **Define API Specification**
-   - Create/import OpenAPI spec
-   - Define schemas
-   - Document endpoints
+   - Create or import OpenAPI spec
+   - Define request/response schemas
+   - Document authentication methods
 
 2. **Generate Clients**
    - Select target languages
-   - Configure generation
-   - Generate code
+   - Configure generation options
+   - Generate type-safe client code
 
-3. **Create Documentation**
-   - Generate reference docs
-   - Add examples
-   - Publish documentation
+3. **Implement Endpoints**
+   - Use Cascade for endpoint implementation
+   - Generate request handlers
+   - Add validation and error handling
+
+4. **Create Documentation**
+   - Generate API reference docs
+   - Add usage examples
+   - Create quick start guides
+
+5. **Test and Validate**
+   - Run contract tests
+   - Validate against specification
+   - Test generated clients
+
+## Output
+
+- Generated API clients (TypeScript, Python, etc.)
+- Type definitions and schemas
+- API reference documentation
+- Quick start guides and examples
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Schema validation failed | Invalid OpenAPI spec | Fix schema errors, validate with tool |
+| Type generation error | Unsupported schema construct | Simplify schema or add custom handler |
+| Client compile error | Generated code invalid | Review template, fix generation config |
+| Doc generation incomplete | Missing descriptions | Add descriptions to OpenAPI spec |
+| Contract test failed | Implementation mismatch | Update implementation to match spec |
+
+## Examples
+
+**Example: Generate TypeScript Client**
+Request: "Generate TypeScript API client from our OpenAPI spec"
+Result: Type-safe client with all endpoints, request/response types, and error handling
+
+**Example: Create API Documentation**
+Request: "Generate API documentation with examples"
+Result: Markdown docs with endpoint descriptions, parameter tables, and curl examples
+
+**Example: Design REST API**
+Request: "Help design REST API for user management"
+Result: OpenAPI spec with user CRUD endpoints, authentication, and error responses
+
+## Resources
+
+- [Windsurf API Development](https://docs.windsurf.ai/features/api-development)
+- [OpenAPI Specification](https://swagger.io/specification/)
+- [API Design Best Practices](https://docs.windsurf.ai/guides/api-design)
 
 ## Success Criteria
 

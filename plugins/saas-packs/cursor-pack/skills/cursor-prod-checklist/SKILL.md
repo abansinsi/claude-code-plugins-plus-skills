@@ -261,3 +261,52 @@ config/production.json
 [ ] Evaluate new models/features
 [ ] Update documentation
 ```
+
+## Prerequisites
+
+- Cursor IDE installed
+- Project workspace ready for configuration
+- Team alignment on coding standards
+- Understanding of Cursor features and settings
+
+## Instructions
+
+1. Complete authentication and licensing setup
+2. Create and configure .cursorrules file
+3. Set up .cursorignore for indexing exclusions
+4. Configure security and privacy settings
+5. Verify all AI features working correctly
+6. Document setup for team onboarding
+
+## Output
+
+- Production-ready Cursor configuration
+- Optimized AI settings for project
+- Security-compliant setup
+- Documented team standards
+- Maintenance schedule established
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| AI features not working | Missing authentication | Sign in and verify subscription |
+| Poor completion quality | Missing .cursorrules | Create comprehensive rules file |
+| Indexing issues | Missing .cursorignore | Add exclusions for large directories |
+| Performance problems | Suboptimal settings | Review and apply performance checklist |
+
+## Examples
+
+**Example: New Project Setup**
+Request: "Set up Cursor for production use on new TypeScript project"
+Result: Complete configuration with .cursorrules, .cursorignore, settings, and verified features
+
+**Example: Team Onboarding Checklist**
+Request: "Create onboarding checklist for new team member"
+Result: Step-by-step setup guide with verification tests
+
+## Resources
+
+- [Cursor Setup Guide](https://cursor.com/docs/setup)
+- [Enterprise Configuration](https://cursor.com/docs/enterprise)
+- [Security Best Practices](https://cursor.com/security)

@@ -231,6 +231,22 @@ Postmortem: [Link when available]
 - [ ] [Monitoring improvement]
 ```
 
+## Output
+- Incident severity classification
+- Triage checklists completed
+- Root cause documented
+- Resolution timeline recorded
+- Postmortem report generated
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `API rate limited` | Too many requests | Use pagination and caching for API calls |
+| `Missing release association` | Commits not linked | Run `sentry-cli releases set-commits` |
+| `Unclear root cause` | Insufficient context | Add more breadcrumbs and context in SDK |
+| `Duplicate incidents` | Poor issue grouping | Customize fingerprinting rules |
+
 ## Resources
 - [Sentry Issue Details](https://docs.sentry.io/product/issues/issue-details/)
 - [Sentry Alerts](https://docs.sentry.io/product/alerts/)

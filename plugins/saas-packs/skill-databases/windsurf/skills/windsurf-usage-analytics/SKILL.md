@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Analyze team AI usage patterns for productivity insights and ROI measurement.
 
+## Overview
+
+This skill enables comprehensive usage analytics for Windsurf deployments. It tracks AI feature adoption, measures productivity improvements, calculates ROI, and identifies optimization opportunities. Analytics data helps justify AI investment, identify training needs, and optimize license allocation based on actual usage patterns.
+
+## Prerequisites
+
+- Windsurf Enterprise subscription
+- Organization administrator access
+- Analytics collection enabled
+- Dashboard access configured
+- Understanding of key metrics
+
 ## Directory Structure
 
 ```
@@ -85,22 +97,69 @@ organization-config/
 - Learning progress
 - Best practice adoption
 
-## Configuration Steps
+## Instructions
 
 1. **Enable Analytics**
    - Configure tracking settings
    - Set privacy filters
-   - Define metrics
+   - Define key metrics
 
-2. **Build Dashboards**
-   - Create visualization widgets
-   - Set refresh schedules
-   - Configure access
+2. **Configure Dashboards**
+   - Create executive dashboard
+   - Build team performance views
+   - Set up individual developer views
 
-3. **Generate Reports**
-   - Schedule regular reports
-   - Define ROI calculations
-   - Set up alerts
+3. **Set Up Reporting**
+   - Schedule weekly summaries
+   - Configure monthly trend reports
+   - Create ROI calculation reports
+
+4. **Define Baselines**
+   - Establish pre-Windsurf baselines
+   - Set target improvements
+   - Configure comparison periods
+
+5. **Monitor and Optimize**
+   - Review adoption trends
+   - Identify training opportunities
+   - Optimize license allocation
+
+## Output
+
+- Analytics dashboards
+- Productivity reports
+- ROI calculations
+- Adoption trend analysis
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Metrics not collecting | Tracking disabled | Enable analytics in settings |
+| Dashboard not loading | Permission issue | Check user access permissions |
+| Report generation failed | Data missing | Verify data collection, check date range |
+| ROI calculation invalid | Missing baseline | Establish pre-implementation baseline |
+| Privacy concern flagged | PII in metrics | Update privacy filters, anonymize data |
+
+## Examples
+
+**Example: Configure Executive Dashboard**
+Request: "Create dashboard showing AI productivity gains for leadership"
+Result: Dashboard with time saved, acceptance rates, ROI summary
+
+**Example: Calculate Team ROI**
+Request: "Calculate ROI of Windsurf for our engineering team"
+Result: Report showing hours saved, cost per developer, net productivity gain
+
+**Example: Identify Training Needs**
+Request: "Which features are underutilized by our team?"
+Result: Adoption report showing low Flow usage, recommending training
+
+## Resources
+
+- [Windsurf Analytics Guide](https://docs.windsurf.ai/admin/analytics)
+- [ROI Measurement Framework](https://docs.windsurf.ai/guides/roi)
+- [Dashboard Configuration](https://docs.windsurf.ai/admin/dashboards)
 
 ## Success Criteria
 

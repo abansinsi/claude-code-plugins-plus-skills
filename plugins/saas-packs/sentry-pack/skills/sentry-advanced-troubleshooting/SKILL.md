@@ -331,6 +331,33 @@ async function runDiagnostics() {
 runDiagnostics();
 ```
 
+## Prerequisites
+- Debug mode enabled in SDK
+- Access to application logs
+- Sentry dashboard access
+- Sentry CLI installed for source map debugging
+
+## Output
+- Root cause identified for SDK issues
+- Source map problems resolved
+- Event capture verified working
+- Performance monitoring validated
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Events not appearing` | Multiple possible causes | Run diagnostic script, check DSN, verify network |
+| `Source maps not resolving` | URL prefix mismatch | Use `sentry-cli sourcemaps explain` |
+| `SDK version conflicts` | Mixed package versions | Ensure all @sentry packages match |
+| `Memory leaks` | Unfinished transactions | Always use try/finally for transaction.finish() |
+
+## Examples
+
+**Example: Debug Missing Events**
+Request: "Events aren't showing up in Sentry dashboard"
+Result: Run diagnostic script, identify beforeSend filtering issue, fix and verify capture works.
+
 ## Resources
 - [Sentry Troubleshooting](https://docs.sentry.io/platforms/javascript/troubleshooting/)
 - [Source Maps Troubleshooting](https://docs.sentry.io/platforms/javascript/sourcemaps/troubleshooting/)

@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Install and configure essential extensions for maximum Windsurf productivity.
 
+## Overview
+
+This skill enables rapid setup of Windsurf with essential extensions for productive development. It covers language support, linting, formatting, Git integration, and productivity tools. Create team-standard extension configurations that can be shared and automatically installed for consistent development environments across your organization.
+
+## Prerequisites
+
+- Windsurf IDE installed
+- Internet connection for extension downloads
+- Admin rights for system-wide extensions (optional)
+- Understanding of team development requirements
+- List of required language support needs
+
 ## Directory Structure
 
 ```
@@ -66,22 +78,69 @@ project-root/
 - **Bracket Pair Colorizer** - Code readability
 - **Path Intellisense** - File path completion
 
-## Configuration Steps
+## Instructions
 
-1. **Install Core Extensions**
-   - Add language support extensions
-   - Install linting and formatting tools
+1. **Assess Requirements**
+   - Identify languages used in project
+   - List required linting and formatting tools
+   - Document team-standard extensions
+
+2. **Install Core Extensions**
+   - Install language support extensions
+   - Add linting and formatting tools
    - Configure Git enhancements
 
-2. **Configure Extension Settings**
+3. **Configure Extension Settings**
    - Set up formatters per language
    - Configure linting rules
    - Enable productivity features
 
-3. **Document Team Extensions**
-   - Create extensions.json recommendations
-   - Document required vs optional
-   - Set up automated installation
+4. **Create Team Configuration**
+   - Build extensions.json with required extensions
+   - Document extension purposes and settings
+   - Set up automated installation scripts
+
+5. **Document and Share**
+   - Create onboarding documentation
+   - Share configuration with team
+   - Set up sync for updates
+
+## Output
+
+- Fully configured Windsurf environment
+- extensions.json with team recommendations
+- settings.json with extension configurations
+- Documentation for extension usage
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Extension install failed | Network or compatibility | Check internet, verify version compatibility |
+| Extension conflict | Multiple extensions overlap | Disable conflicting extension, choose one |
+| Settings not applied | JSON syntax error | Validate settings.json syntax |
+| Extension not activating | Missing dependency | Install required dependencies |
+| Performance issues | Too many extensions | Disable unused extensions, check resource usage |
+
+## Examples
+
+**Example: Set Up JavaScript Development Environment**
+Request: "Install extensions for JavaScript development with React"
+Result: ESLint, Prettier, React snippets, ES7+ React/Redux snippets installed and configured
+
+**Example: Configure Python Data Science Environment**
+Request: "Set up Windsurf for Python data science work"
+Result: Python, Jupyter, Pylance, Python Docstring Generator installed
+
+**Example: Create Team Extension Pack**
+Request: "Create shareable extension configuration for backend team"
+Result: extensions.json with backend-focused extensions, settings.json with team conventions
+
+## Resources
+
+- [Windsurf Extension Marketplace](https://marketplace.windsurf.ai)
+- [Extension Development Guide](https://docs.windsurf.ai/extensions/development)
+- [Team Extension Management](https://docs.windsurf.ai/admin/extensions)
 
 ## Success Criteria
 

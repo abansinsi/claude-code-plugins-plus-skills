@@ -349,3 +349,52 @@ export class AuthService {
   // Implementation
 }
 ```
+
+## Prerequisites
+
+- Project with defined architecture patterns
+- Understanding of project structure conventions
+- Team alignment on coding standards
+- Cursor IDE configured for team use
+
+## Instructions
+
+1. Choose project structure (feature-based or layer-based)
+2. Create comprehensive .cursorrules file
+3. Configure .cursorignore for indexing
+4. Set up workspace settings for team
+5. Document architecture decisions
+6. Create onboarding documentation
+
+## Output
+
+- Well-organized project structure
+- Comprehensive .cursorrules configuration
+- Team-aligned configuration files
+- Documented architecture patterns
+- AI-friendly codebase
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Inconsistent AI suggestions | Missing or vague .cursorrules | Add detailed rules and examples |
+| Team configuration drift | No shared settings | Commit .vscode/settings.json |
+| Monorepo confusion | No workspace structure | Set up .cursorrules inheritance |
+| Poor indexing results | Wrong .cursorignore | Review and update exclusions |
+
+## Examples
+
+**Example: Feature-Based Architecture Setup**
+Request: "Set up Cursor for feature-based React project"
+Result: Directory structure, .cursorrules, and team settings configured
+
+**Example: Monorepo Configuration**
+Request: "Configure Cursor for Turborepo monorepo"
+Result: Root and package-level .cursorrules with proper inheritance
+
+## Resources
+
+- [Cursor Architecture Guide](https://cursor.com/docs/architecture)
+- [Project Structure Best Practices](https://cursor.com/docs/structure)
+- [Team Configuration Guide](https://cursor.com/docs/teams)

@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Profile and optimize code with AI-assisted performance analysis.
 
+## Overview
+
+This skill enables AI-assisted performance profiling within Windsurf. Cascade analyzes profiling data to identify bottlenecks, suggest optimizations, and predict impact of changes. It integrates with language-specific profilers and helps prioritize optimization efforts based on actual performance data rather than assumptions.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- Profiling tools installed (Chrome DevTools, node --prof, py-spy, etc.)
+- Application with performance concerns
+- Baseline metrics established
+- Understanding of performance targets
+
 ## Directory Structure
 
 ```
@@ -98,27 +110,69 @@ project-root/
 - Impact prediction
 - Before/after comparison
 
-## Configuration Steps
+## Instructions
 
 1. **Establish Baseline**
-   - Run profiler on current code
+   - Run profiler on current application
    - Document baseline metrics
-   - Set thresholds
+   - Set performance thresholds
 
-2. **Analyze Bottlenecks**
-   - Identify hot paths
-   - Find memory issues
-   - Locate I/O problems
+2. **Collect Profile Data**
+   - Enable profiling for target scenarios
+   - Capture representative workloads
+   - Export profile data
 
-3. **Optimize with Cascade**
-   - Get AI optimization suggestions
+3. **Analyze with Cascade**
+   - Upload profile to Cascade
+   - Identify hot paths and bottlenecks
+   - Generate optimization recommendations
+
+4. **Implement Optimizations**
+   - Prioritize by impact and effort
    - Apply targeted fixes
-   - Measure improvements
+   - Re-profile to measure improvement
 
-4. **Validate Results**
-   - Run benchmarks
-   - Compare to baseline
-   - Document changes
+5. **Document and Monitor**
+   - Record before/after metrics
+   - Update benchmarks
+   - Set up continuous monitoring
+
+## Output
+
+- Profiling data and analysis
+- Bottleneck identification reports
+- Optimization recommendations
+- Before/after comparison metrics
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Profile capture failed | Profiler not configured | Check profiler installation and config |
+| Incomplete data | Sampling too low | Increase sampling rate |
+| Memory spike during profiling | Profiler overhead | Use sampling profiler vs instrumentation |
+| Inconsistent results | Variable workload | Standardize test scenarios |
+| Optimization regression | Fix introduced issue | Rollback, investigate side effects |
+
+## Examples
+
+**Example: Identify Memory Leaks**
+Request: "Profile application for memory leaks"
+Result: Memory profile showing leak sources, object retention graphs, fix suggestions
+
+**Example: Optimize API Response Time**
+Request: "Find why /api/users endpoint is slow"
+Result: Profile showing database query taking 80% of time, optimization recommendations
+
+**Example: CPU Bottleneck Analysis**
+Request: "Identify CPU-intensive code paths"
+Result: Flame graph with hot paths, specific function optimization suggestions
+
+## Resources
+
+- [Windsurf Performance Guide](https://docs.windsurf.ai/features/performance)
+- [Profiling Best Practices](https://docs.windsurf.ai/guides/profiling)
+- [Optimization Patterns](https://docs.windsurf.ai/guides/optimization)
 
 ## Success Criteria
 

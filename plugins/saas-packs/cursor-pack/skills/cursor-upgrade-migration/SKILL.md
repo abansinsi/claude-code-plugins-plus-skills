@@ -280,3 +280,53 @@ If format changes between versions:
 - Update shared .cursorrules
 - Document any issues/fixes
 ```
+
+## Prerequisites
+
+- Current Cursor installation to upgrade
+- Backup of current settings (recommended)
+- Admin rights for installation (if required)
+- Network access for download
+
+## Instructions
+
+1. Check current version (Help > About)
+2. Backup settings and extensions list
+3. Check release notes for breaking changes
+4. Apply update (auto-update or manual download)
+5. Verify settings preserved
+6. Test AI features working
+7. Reinstall extensions if needed
+
+## Output
+
+- Updated Cursor installation
+- Preserved settings and configurations
+- Verified working AI features
+- Documented changes and fixes
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Settings not preserved | Breaking changes or failed migration | Restore from backup, reconfigure |
+| Extensions missing | Compatibility issues | Reinstall from exported list |
+| Performance issues | Cache incompatibility | Clear cache and restart |
+| Features broken | Version incompatibility | Rollback to previous version |
+
+## Examples
+
+**Example: Auto-Update Process**
+Request: "Update Cursor when notification appears"
+Result: Click restart, settings preserved, features verified working
+
+**Example: Cross-Machine Migration**
+Request: "Transfer Cursor setup to new laptop"
+Result: Settings Sync enabled, extensions installed, configuration verified
+
+## Resources
+
+- [Cursor Changelog](https://cursor.com/changelog)
+- [Cursor Downloads](https://cursor.com/download)
+- [Settings Sync Documentation](https://cursor.com/docs/sync)
+- [Cursor GitHub Releases](https://github.com/getcursor/cursor/releases)

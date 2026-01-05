@@ -168,6 +168,33 @@ Sentry.init({
 });
 ```
 
+## Prerequisites
+- Sentry SDK installed
+- Debug mode enabled for troubleshooting
+- Access to Sentry dashboard
+- Application logs available
+
+## Output
+- Issue root cause identified
+- Configuration fix applied
+- Error capture verified working
+- Documentation of resolution
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Events not appearing` | DSN, sampling, or filtering issue | Use diagnostic checklist above |
+| `Source maps not working` | URL prefix or release mismatch | Verify upload and SDK release match |
+| `429 errors` | Rate limit exceeded | Implement sampling and filtering |
+| `Missing breadcrumbs` | Integration disabled | Enable Breadcrumbs integration |
+
+## Examples
+
+**Example: Debug Missing Events**
+Request: "Sentry isn't showing any of our errors"
+Result: DSN was unset in production environment, fixed by adding SENTRY_DSN to deployment config.
+
 ## Resources
 - [Sentry Troubleshooting](https://docs.sentry.io/platforms/javascript/troubleshooting/)
 - [Sentry Status](https://status.sentry.io)

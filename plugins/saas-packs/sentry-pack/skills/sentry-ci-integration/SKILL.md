@@ -189,6 +189,33 @@ SENTRY_PROJECT=your-project
       --finished $(date +%s)
 ```
 
+## Prerequisites
+- Sentry CLI installed or available in CI
+- `SENTRY_AUTH_TOKEN` secret configured
+- `SENTRY_ORG` and `SENTRY_PROJECT` environment variables set
+- Source maps generated during build
+
+## Output
+- Release created and finalized in Sentry
+- Source maps uploaded for stack trace mapping
+- Commits associated with release
+- Deploy notification sent to Sentry
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Authentication failed` | Invalid or expired token | Regenerate auth token in Sentry settings |
+| `Release not found` | Release not created first | Run `sentry-cli releases new` before upload |
+| `Source map upload failed` | Invalid file paths | Check `--url-prefix` matches actual URLs |
+| `Permission denied` | Token missing scopes | Ensure token has `project:releases` scope |
+
+## Examples
+
+**Example: Basic GitHub Actions Release**
+Request: "Set up Sentry releases in GitHub Actions"
+Result: Workflow creates release on push to main, uploads source maps, notifies Sentry of deployment.
+
 ## Resources
 - [Sentry CI/CD](https://docs.sentry.io/product/releases/setup/release-automation/)
 - [GitHub Action](https://github.com/getsentry/action-release)

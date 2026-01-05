@@ -177,6 +177,33 @@ sentry-cli releases files $RELEASE list
 sentry-cli sourcemaps explain $EVENT_ID
 ```
 
+## Prerequisites
+- Debug mode enabled in SDK
+- Sentry CLI installed for source map diagnostics
+- Access to environment variables
+- Application logs available
+
+## Output
+- Debug information bundle generated
+- SDK version and configuration documented
+- Network connectivity verified
+- Test event capture confirmed
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Cannot get SDK version` | SDK not initialized | Run diagnostic after Sentry.init() |
+| `Network test failed` | Firewall blocking Sentry | Check network rules for sentry.io |
+| `Test event not appearing` | Multiple possible causes | Review debug bundle output systematically |
+| `Source maps explain failed` | Missing event ID | Capture error first, then use explain command |
+
+## Examples
+
+**Example: Prepare Support Ticket**
+Request: "Create debug bundle for Sentry support ticket"
+Result: JSON bundle with SDK version, config (DSN redacted), test event ID, connectivity status.
+
 ## Resources
 - [Sentry Support](https://sentry.io/support/)
 - [Sentry GitHub Issues](https://github.com/getsentry/sentry-javascript/issues)

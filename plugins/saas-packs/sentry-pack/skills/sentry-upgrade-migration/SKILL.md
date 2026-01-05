@@ -214,6 +214,27 @@ git checkout HEAD~1 -- package-lock.json
 npm ci
 ```
 
+## Output
+- SDK upgraded to target version
+- Breaking changes resolved
+- Code updated for new APIs
+- Error capture verified working
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Hub not found` | API removed in v8 | Use direct Sentry.* calls instead of Hub |
+| `Integration not found` | Import path changed | Check migration guide for new imports |
+| `TypeScript errors` | Type definitions changed | Update to latest @types or SDK types |
+| `Performance data missing` | Tracing API changed | Update to new integration pattern |
+
+## Examples
+
+**Example: Upgrade from v7 to v8**
+Request: "Upgrade Sentry JavaScript SDK from 7.x to 8.x"
+Result: Package updated, Hub usage replaced with direct calls, integrations updated, tests passing.
+
 ## Resources
 - [Sentry JavaScript Changelog](https://github.com/getsentry/sentry-javascript/blob/master/CHANGELOG.md)
 - [Sentry Python Changelog](https://github.com/getsentry/sentry-python/blob/master/CHANGELOG.md)

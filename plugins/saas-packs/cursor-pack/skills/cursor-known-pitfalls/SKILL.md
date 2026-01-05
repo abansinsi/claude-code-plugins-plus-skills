@@ -357,3 +357,52 @@ rm -rf ~/.cursor/
 [ ] Regular cache clearing
 [ ] Version control always used
 ```
+
+## Prerequisites
+
+- Cursor IDE installed and configured
+- Active project workspace
+- Basic understanding of Cursor features
+- Version control system in place
+
+## Instructions
+
+1. Review the pitfalls list for your use case
+2. Audit your current Cursor configuration
+3. Implement recommended settings and files
+4. Test AI features after configuration changes
+5. Document team-specific workarounds
+6. Schedule regular configuration reviews
+
+## Output
+
+- Awareness of common Cursor pitfalls
+- Improved AI suggestion quality
+- Better security practices
+- Optimized performance configuration
+- Team alignment on best practices
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| AI output incorrect | Context pollution or vague prompts | Start new chat, be more specific |
+| Tab completion wrong | Outdated patterns or wrong framework | Update .cursorrules, verify language mode |
+| Performance degraded | Too many extensions or large context | Audit extensions, add to .cursorignore |
+| Secrets exposed | Sensitive files not excluded | Update .cursorignore, enable Privacy Mode |
+
+## Examples
+
+**Example: Fixing Context Pollution**
+Request: "Cursor is giving irrelevant suggestions after a long conversation"
+Result: Start new chat (Cmd+Shift+L), provide focused context with @-mentions
+
+**Example: Resolving Tab Key Confusion**
+Request: "Tab keeps inserting AI code when I want indentation"
+Result: Watch for ghost text, use Esc to dismiss, configure completion delay
+
+## Resources
+
+- [Cursor Best Practices](https://cursor.com/docs/best-practices)
+- [Cursor Community Forum](https://forum.cursor.com/)
+- [Cursor Discord Community](https://discord.gg/cursor)

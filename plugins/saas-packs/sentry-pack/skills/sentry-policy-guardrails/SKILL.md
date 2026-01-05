@@ -348,6 +348,34 @@ async function getComplianceMetrics(): Promise<ComplianceMetrics> {
 }
 ```
 
+## Prerequisites
+- Organization-wide standards documented
+- Team structure defined
+- Compliance requirements identified
+- Shared configuration package repository
+
+## Output
+- Shared Sentry configuration package
+- Enforced organization defaults
+- Alert policy templates
+- Project naming validation
+- Compliance audit reports
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Teams bypassing policies` | Direct SDK init | Require shared config package usage |
+| `Audit failures` | Missing required alerts | Automate compliance checks in CI |
+| `Naming violations` | No validation | Implement project name validation API |
+| `Inconsistent configurations` | Multiple init points | Centralize SDK configuration |
+
+## Examples
+
+**Example: Enterprise Policy Implementation**
+Request: "Enforce consistent Sentry configuration across 20 services"
+Result: Shared NPM package with enforced defaults, PII scrubbing, and required alert rules.
+
 ## Resources
 - [Sentry Organization Settings](https://docs.sentry.io/product/accounts/getting-started/)
 - [Sentry API](https://docs.sentry.io/api/)

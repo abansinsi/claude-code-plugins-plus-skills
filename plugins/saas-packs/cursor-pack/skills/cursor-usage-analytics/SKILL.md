@@ -385,3 +385,52 @@ High costs → Model optimization
 Feature gaps → Targeted workshops
 Power users → Champions program
 ```
+
+## Prerequisites
+
+- Cursor Business or Enterprise subscription
+- Admin access to organization dashboard
+- Understanding of key metrics
+- Access to team for feedback
+
+## Instructions
+
+1. Access Admin Dashboard > Analytics
+2. Review key metrics (users, completions, costs)
+3. Identify trends and anomalies
+4. Create custom reports for stakeholders
+5. Set up scheduled report delivery
+6. Plan actions based on insights
+
+## Output
+
+- Usage metrics and trends
+- Team productivity insights
+- Cost analysis and optimization
+- Custom reports for stakeholders
+- Data-driven improvement plans
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| No analytics data | Recent setup or sync delay | Wait 24 hours for data population |
+| Missing users in report | Users not assigned to team | Verify team membership |
+| Cost data inaccurate | Mixed personal/team usage | Configure team-only API keys |
+| Export failing | Large dataset or timeout | Reduce date range, try again |
+
+## Examples
+
+**Example: Monthly Usage Report**
+Request: "Generate usage report for engineering team this month"
+Result: Report with completions, acceptance rate, model usage, and cost breakdown
+
+**Example: Identifying Training Needs**
+Request: "Find users with low Cursor adoption"
+Result: List of users with below-average usage for targeted training
+
+## Resources
+
+- [Cursor Analytics Dashboard](https://cursor.com/dashboard)
+- [Usage Metrics Guide](https://cursor.com/docs/analytics)
+- [ROI Calculation Tips](https://cursor.com/blog/roi)

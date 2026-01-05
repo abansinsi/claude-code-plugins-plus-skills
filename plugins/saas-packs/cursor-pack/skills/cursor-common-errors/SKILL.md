@@ -280,3 +280,51 @@ Include:
 - Steps to reproduce
 - Relevant logs
 ```
+
+## Prerequisites
+
+- Cursor IDE installed
+- Understanding of common error types
+- Access to logs and developer tools
+- Network connectivity for support resources
+
+## Instructions
+
+1. Identify the error type (auth, completion, indexing, etc.)
+2. Check common solutions for that error type
+3. Review logs for specific error messages
+4. Try basic troubleshooting (restart, clear cache)
+5. Report persistent issues with full details
+6. Document solutions for team reference
+
+## Output
+
+- Identified error cause
+- Applied solution or workaround
+- Documented fix for future reference
+- Issue report if unresolved
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Authentication failed | Session expired or credential issue | Sign out, clear cache, sign back in |
+| No completions | Feature disabled or rate limit | Check settings and subscription status |
+| Indexing failed | Disk space or permissions | Free disk space, check file permissions |
+| High CPU/memory | Extension or large workspace | Disable extensions, add exclusions |
+
+## Examples
+
+**Example: Debugging Authentication Issues**
+Request: "Can't sign in to Cursor"
+Result: Clear browser cookies, try alternate auth method, verify account status
+
+**Example: Fixing Missing Completions**
+Request: "Tab completion stopped working"
+Result: Verify settings enabled, check rate limits, restart Cursor
+
+## Resources
+
+- [Cursor Troubleshooting Guide](https://cursor.com/docs/troubleshooting)
+- [Cursor GitHub Issues](https://github.com/getcursor/cursor/issues)
+- [Cursor Discord Support](https://discord.gg/cursor)

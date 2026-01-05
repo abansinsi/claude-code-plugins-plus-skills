@@ -127,6 +127,15 @@ sentry_sdk.init(
 )
 ```
 
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Debug output not showing` | Debug mode not enabled | Set `debug: true` in init options |
+| `Events sent to production` | Wrong DSN configured | Check environment-specific DSN is loaded |
+| `Too many events in dev` | High sample rate | Set `enabled: false` for development |
+| `Test events in prod dashboard` | Shared DSN across envs | Use separate Sentry projects per environment |
+
 ## Resources
 - [Sentry Environment Config](https://docs.sentry.io/platforms/javascript/configuration/environments/)
 - [Sentry Debug Mode](https://docs.sentry.io/platforms/javascript/configuration/options/#debug)

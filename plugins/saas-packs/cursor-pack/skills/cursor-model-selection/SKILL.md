@@ -253,3 +253,51 @@ Strategy:
 3. Start new conversation
 4. Be more concise in prompts
 ```
+
+## Prerequisites
+
+- Cursor IDE with subscription or API keys
+- Understanding of model capabilities
+- Knowledge of task requirements
+- API account (if using own keys)
+
+## Instructions
+
+1. Understand model strengths and context limits
+2. Choose model based on task type (speed vs quality)
+3. Configure default models in settings
+4. Use per-conversation model selection
+5. Set up API keys for additional models
+6. Monitor usage and costs
+
+## Output
+
+- Optimal model selection per task
+- Configured default models
+- Cost-effective model usage
+- Fallback model configuration
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Model not available | Subscription tier or access | Check subscription, request access |
+| Rate limited | Too many requests | Switch model or wait for reset |
+| Context too long | Model limit exceeded | Use larger context model |
+| Poor quality output | Wrong model for task | Switch to higher quality model |
+
+## Examples
+
+**Example: Configure Task-Based Models**
+Request: "Set up fast model for completions, accurate for chat"
+Result: GPT-3.5-Turbo for completions, GPT-4 Turbo for chat
+
+**Example: API Key Setup**
+Request: "Use my own OpenAI API key for GPT-4"
+Result: API key configured, GPT-4 available with personal billing
+
+## Resources
+
+- [Cursor Model Documentation](https://cursor.com/docs/models)
+- [OpenAI Model Guide](https://platform.openai.com/docs/models)
+- [Anthropic Claude Models](https://docs.anthropic.com/claude/docs/models-overview)

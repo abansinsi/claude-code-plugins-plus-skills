@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Configure and enforce code quality with AI-assisted linting.
 
+## Overview
+
+This skill enables comprehensive linting configuration within Windsurf. Cascade assists with ESLint, Prettier, Stylelint, and other linting tool setup, helping resolve configuration conflicts, suggesting rules based on project patterns, and automating code quality enforcement. Proper linting configuration catches errors early and maintains consistent code style.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- Node.js for JavaScript/TypeScript projects
+- Package manager (npm, yarn, pnpm)
+- Understanding of code style preferences
+- Team agreement on quality standards
+
 ## Directory Structure
 
 ```
@@ -83,22 +95,69 @@ project-root/
 - Performance optimization
 - Migration assistance
 
-## Configuration Steps
+## Instructions
 
 1. **Choose Base Configuration**
-   - Select framework preset
+   - Select framework preset (Airbnb, Standard, etc.)
    - Enable relevant plugins
    - Set environment targets
 
-2. **Customize Rules**
-   - Adjust severity levels
+2. **Configure Rules**
+   - Adjust severity levels (error, warn, off)
    - Add project-specific rules
-   - Configure exceptions
+   - Configure exception patterns
 
-3. **Integrate with Workflow**
-   - Enable format on save
-   - Add pre-commit hooks
-   - Configure CI checks
+3. **Set Up Prettier Integration**
+   - Install eslint-config-prettier
+   - Configure format rules
+   - Set up format on save
+
+4. **Add Pre-Commit Hooks**
+   - Configure lint-staged
+   - Set up Husky hooks
+   - Add commit blocking for errors
+
+5. **Integrate with CI**
+   - Add linting to CI pipeline
+   - Configure failure thresholds
+   - Set up reporting
+
+## Output
+
+- Configured .eslintrc.js
+- Prettier configuration
+- Pre-commit hooks
+- CI integration
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Rule conflict | ESLint/Prettier clash | Use eslint-config-prettier |
+| Parser error | Wrong parser configured | Set parser for file type |
+| Plugin not found | Missing dependency | Install plugin package |
+| Performance issue | Too many rules/files | Add .eslintignore entries |
+| Auto-fix breaks code | Aggressive auto-fix | Disable auto-fix for rule |
+
+## Examples
+
+**Example: Set Up TypeScript Linting**
+Request: "Configure ESLint for TypeScript with React"
+Result: ESLint config with @typescript-eslint, React hooks rules, Prettier integration
+
+**Example: Resolve Linting Conflicts**
+Request: "Fix conflicts between ESLint and Prettier"
+Result: eslint-config-prettier installed, conflicting rules disabled
+
+**Example: Create Strict Profile**
+Request: "Set up strict linting for production code"
+Result: Strict profile with all errors, no warnings, max enforcement
+
+## Resources
+
+- [Windsurf Linting Guide](https://docs.windsurf.ai/features/linting)
+- [ESLint Documentation](https://eslint.org/docs/latest/)
+- [Prettier Integration](https://prettier.io/docs/en/integrating-with-linters.html)
 
 ## Success Criteria
 

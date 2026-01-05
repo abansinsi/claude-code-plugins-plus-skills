@@ -277,3 +277,51 @@ Enter             Send prompt
 Shift+Enter       New line in prompt
 Cmd+Enter         Apply all changes
 ```
+
+## Prerequisites
+
+- Cursor IDE with Composer feature access
+- Project workspace with existing code patterns
+- Understanding of multi-file editing workflows
+- Configured .cursorrules for project standards
+
+## Instructions
+
+1. Open Composer (Cmd+I or Ctrl+I)
+2. Describe the files and changes needed
+3. Use @-mentions to reference existing patterns
+4. Specify file structure preferences
+5. Review all proposed changes
+6. Apply changes and test
+
+## Output
+
+- Multi-file code generation
+- Coordinated feature implementation
+- Pattern-consistent scaffolding
+- Refactored codebase
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Composer not finding files | Wrong path or excluded | Use explicit @-mention paths |
+| Unexpected changes | Vague instructions | Be more specific in requirements |
+| Timeout on large requests | Too much work at once | Break into smaller requests |
+| Pattern mismatch | Missing reference files | Add @-mentions for patterns to follow |
+
+## Examples
+
+**Example: Feature Module Generation**
+Request: "Create a notifications feature with types, service, hooks, and components following @services/auth.ts patterns"
+Result: Complete feature module with 5+ coordinated files
+
+**Example: Codebase Refactoring**
+Request: "Migrate all API calls from axios to fetch with the new wrapper"
+Result: All API files updated consistently
+
+## Resources
+
+- [Composer Documentation](https://cursor.com/docs/composer)
+- [Multi-File Workflows](https://cursor.com/docs/workflows)
+- [Cursor Best Practices](https://cursor.com/docs/best-practices)

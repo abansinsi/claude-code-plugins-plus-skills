@@ -262,6 +262,33 @@ teams:
 - Delete unused tokens
 - Audit token usage
 
+## Prerequisites
+- Sentry Business or Enterprise plan
+- Identity provider configured (for SSO)
+- Team structure documented
+- Permission requirements defined
+
+## Output
+- Teams created with appropriate members
+- Projects assigned to teams
+- SSO/SAML configured
+- API tokens with scoped permissions
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `SAML login failed` | Certificate mismatch | Re-upload IdP certificate |
+| `SCIM sync failing` | Token expired | Generate new SCIM bearer token |
+| `Team not seeing project` | Project not assigned | Add team to project via API or UI |
+| `API token unauthorized` | Missing scopes | Create new token with required scopes |
+
+## Examples
+
+**Example: SSO Setup with Okta**
+Request: "Configure Sentry SSO with Okta"
+Result: SAML configured, auto team assignment enabled, SCIM provisioning active.
+
 ## Resources
 - [Sentry Team Management](https://docs.sentry.io/product/accounts/membership/)
 - [SSO & SAML](https://docs.sentry.io/product/accounts/sso/)

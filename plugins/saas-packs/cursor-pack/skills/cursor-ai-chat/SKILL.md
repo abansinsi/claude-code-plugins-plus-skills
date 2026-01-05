@@ -187,3 +187,52 @@ Do:
 3. "Implement login with JWT"
 4. "Add password reset flow"
 ```
+
+## Prerequisites
+
+- Cursor IDE installed and authenticated
+- Project workspace with code files
+- Understanding of @-mention syntax
+- Basic familiarity with AI prompting
+
+## Instructions
+
+1. Open AI Chat panel (Cmd+L or Ctrl+L)
+2. Select relevant code before asking questions
+3. Use @-mentions to add file context
+4. Ask specific, clear questions
+5. Review and apply suggested code
+6. Use multi-turn conversations for iterative work
+
+## Output
+
+- Code explanations and documentation
+- Generated code snippets
+- Debugging assistance
+- Refactoring suggestions
+- Code review feedback
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Chat not responding | Network or rate limit | Check connection, wait for limit reset |
+| Context too large | Too many @-mentions or selection | Start new chat, reduce context |
+| Irrelevant responses | Vague prompt or polluted context | Be more specific, start fresh chat |
+| Model unavailable | Rate limit or subscription tier | Switch model or wait for reset |
+
+## Examples
+
+**Example: Code Explanation**
+Request: "Explain what this authentication middleware does step by step" (with code selected)
+Result: Detailed breakdown of each function, security considerations, and flow diagram
+
+**Example: Debugging with Context**
+Request: "Why is this throwing TypeError: Cannot read property 'map' of undefined @api/users.ts"
+Result: Identifies that API response may be null, suggests adding null check
+
+## Resources
+
+- [Cursor Chat Documentation](https://cursor.com/docs/chat)
+- [Effective Prompting Guide](https://cursor.com/docs/prompting)
+- [Context Management Tips](https://cursor.com/docs/context)

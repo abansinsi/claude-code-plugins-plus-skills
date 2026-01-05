@@ -213,6 +213,33 @@ Sentry.init({
 });
 ```
 
+## Prerequisites
+- Performance monitoring enabled
+- Transaction volume metrics available
+- Critical paths identified
+- Performance baseline established
+
+## Output
+- Optimized sample rates configured
+- SDK overhead minimized
+- Transaction naming standardized
+- Resource usage reduced
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `High SDK overhead` | Too many integrations | Remove unused integrations |
+| `Too many transactions` | Sampling rate too high | Use dynamic sampling based on endpoint |
+| `Orphan spans` | Missing transaction context | Always create spans within transaction scope |
+| `Memory leaks` | Unfinished transactions | Use try/finally to ensure finish() called |
+
+## Examples
+
+**Example: Reduce SDK Overhead**
+Request: "Sentry is adding latency to our requests"
+Result: Disabled unused integrations, reduced breadcrumbs to 20, implemented async capture.
+
 ## Resources
 - [Sentry Performance](https://docs.sentry.io/product/performance/)
 - [Sampling Strategies](https://docs.sentry.io/platforms/javascript/configuration/sampling/)

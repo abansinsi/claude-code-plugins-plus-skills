@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Manage team-wide settings and AI policies for consistent developer experience.
 
+## Overview
+
+This skill enables centralized management of Windsurf settings across teams and organizations. It covers editor preferences, AI behavior policies, tool approvals, and compliance requirements. Administrators can define organization-wide defaults with team-specific overrides, ensuring consistency while accommodating specialized team needs.
+
+## Prerequisites
+
+- Windsurf Enterprise subscription
+- Organization administrator role
+- Understanding of team structure and needs
+- Compliance requirements documentation
+- Team feedback on desired settings
+
 ## Directory Structure
 
 ```
@@ -78,22 +90,69 @@ organization-config/
 - Tool approval workflows
 - Compliance requirements
 
-## Configuration Steps
+## Instructions
 
 1. **Define Organization Defaults**
-   - Set baseline configuration
-   - Enable required features
-   - Disable restricted features
+   - Document baseline configuration requirements
+   - Enable required features organization-wide
+   - Disable restricted features globally
 
 2. **Create Team Overrides**
-   - Customize per team needs
-   - Document exceptions
-   - Set approval workflows
+   - Identify teams with specialized needs
+   - Document exceptions and justifications
+   - Create team-specific override files
 
-3. **Deploy and Monitor**
-   - Push settings to all members
-   - Track compliance
-   - Gather feedback
+3. **Set Up Policies**
+   - Define AI usage policies
+   - Configure code sharing rules
+   - Establish tool approval workflow
+
+4. **Deploy Settings**
+   - Push settings to all team members
+   - Configure automatic sync
+   - Set up change notifications
+
+5. **Monitor and Iterate**
+   - Track policy compliance
+   - Gather team feedback
+   - Update settings based on needs
+
+## Output
+
+- Organization-wide settings configuration
+- Team-specific override files
+- Policy documentation
+- Compliance reports
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Settings not syncing | Network or permission issue | Check connectivity, verify user permissions |
+| Override conflict | Conflicting team settings | Review and prioritize conflicting settings |
+| Policy violation detected | User action against policy | Review policy, provide guidance or exception |
+| Extension blocked | Not on approved list | Submit for approval or add to approved list |
+| Settings reset | User override removed | Re-enable user overrides or update global |
+
+## Examples
+
+**Example: Configure Organization Defaults**
+Request: "Set up default Windsurf settings for all developers"
+Result: Global settings with formatting, linting, and AI behavior configured
+
+**Example: Create Security Team Override**
+Request: "Security team needs stricter AI policies than default"
+Result: Team override with enhanced audit logging and restricted AI features
+
+**Example: Enforce Extension Policy**
+Request: "Only allow approved extensions organization-wide"
+Result: Tool approval policy with whitelist and request workflow
+
+## Resources
+
+- [Windsurf Team Administration](https://docs.windsurf.ai/admin/team-settings)
+- [Policy Configuration Guide](https://docs.windsurf.ai/admin/policies)
+- [Settings Sync Documentation](https://docs.windsurf.ai/features/settings-sync)
 
 ## Success Criteria
 

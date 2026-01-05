@@ -172,6 +172,33 @@ actions:
 4. **Configure alerts per environment**
 5. **Disable or reduce noise in development**
 
+## Prerequisites
+- Environment naming convention defined
+- DSN management strategy
+- Sample rate requirements per environment
+- Alert routing per environment
+
+## Output
+- Environment-specific Sentry configuration
+- Separate or shared projects configured
+- Environment-based alert rules
+- Sample rates optimized per environment
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Dev errors in prod dashboard` | Shared DSN | Use separate DSN per environment or disable in dev |
+| `Environment filter not working` | Environment not set | Verify `environment` option in SDK init |
+| `Staging alerts overwhelming` | Same alert rules as prod | Configure environment-specific alert conditions |
+| `Sample rates inconsistent` | Hard-coded values | Use environment-based configuration object |
+
+## Examples
+
+**Example: Three-Environment Setup**
+Request: "Configure Sentry for dev, staging, and production"
+Result: Single project with environment tags, 100% sampling in dev/staging, 10% in production, alerts only for production.
+
 ## Resources
 - [Sentry Environments](https://docs.sentry.io/product/sentry-basics/environments/)
 - [Filtering Events](https://docs.sentry.io/platforms/javascript/configuration/filtering/)

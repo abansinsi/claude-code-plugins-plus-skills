@@ -311,24 +311,50 @@ context:
     - See @hooks/useAuth.ts for hook patterns
 ```
 
-## Verification
+## Prerequisites
 
-### Test Your Rules
-```
-1. Create new file
-2. Ask Cursor to generate code
-3. Check if it follows your rules
-4. Refine rules if needed
-```
+- Cursor IDE installed and authenticated
+- Project workspace open in Cursor
+- Write access to project root directory
+- Basic understanding of YAML syntax
 
-### Common Issues
-```
-Problem: Rules not applied
-Solution: Ensure .cursorrules is at project root
+## Instructions
 
-Problem: Inconsistent output
-Solution: Add more specific examples
+1. Navigate to your project root directory
+2. Create a new file named `.cursorrules`
+3. Add project metadata (name, language, framework)
+4. Define coding rules and conventions
+5. Include examples of preferred patterns
+6. Save the file and test with Cursor AI
 
-Problem: Rules conflict
-Solution: Prioritize rules, remove conflicts
-```
+## Output
+
+- `.cursorrules` file at project root
+- Customized AI code generation behavior
+- Consistent code style across AI suggestions
+- Project-specific context for Cursor AI
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Rules not applied | File not at project root | Move `.cursorrules` to root directory |
+| Inconsistent output | Vague or conflicting rules | Add specific examples and remove conflicts |
+| YAML parse error | Invalid YAML syntax | Validate YAML structure and indentation |
+| Rules ignored | Cache issue | Restart Cursor or reopen project |
+
+## Examples
+
+**Example: Basic TypeScript Project Configuration**
+Request: "Configure cursor rules for a React TypeScript project"
+Result: Creates `.cursorrules` with TypeScript strict mode, functional components, and Tailwind styling rules
+
+**Example: Adding Custom Naming Conventions**
+Request: "Add naming conventions for components and hooks"
+Result: Adds naming section with PascalCase for components, camelCase for functions, kebab-case for files
+
+## Resources
+
+- [Cursor Documentation](https://cursor.com/docs)
+- [YAML Syntax Guide](https://yaml.org/spec/)
+- [Cursor Community Discord](https://discord.gg/cursor)

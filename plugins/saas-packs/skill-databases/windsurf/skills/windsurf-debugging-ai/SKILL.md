@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Leverage Cascade for intelligent debugging and rapid error resolution.
 
+## Overview
+
+This skill enables AI-assisted debugging within Windsurf. Cascade analyzes error messages, stack traces, and code context to identify root causes and suggest fixes. It learns from your codebase patterns to provide contextually relevant debugging assistance, reducing time spent on common errors and helping identify subtle bugs that might otherwise be missed.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- Application with reproducible issues
+- Debug configuration set up
+- Error logs accessible
+- Understanding of application architecture
+
 ## Directory Structure
 
 ```
@@ -68,22 +80,69 @@ project-root/
 - Log correlation
 - Environment comparison
 
-## Configuration Steps
+## Instructions
 
-1. **Set Up Debug Environment**
-   - Configure launch settings
-   - Set up source maps
-   - Enable debug logging
+1. **Capture Error Context**
+   - Reproduce the error
+   - Capture stack trace and logs
+   - Note environmental conditions
 
-2. **Train Error Patterns**
-   - Document common errors
-   - Record resolutions
-   - Build pattern library
+2. **Analyze with Cascade**
+   - Share error message with Cascade
+   - Provide relevant code context
+   - Review AI analysis
 
-3. **Integrate with Cascade**
-   - Enable error forwarding
-   - Configure analysis depth
-   - Set up fix suggestions
+3. **Investigate Root Cause**
+   - Set breakpoints at suggested locations
+   - Inspect variable states
+   - Trace execution flow
+
+4. **Apply Fix**
+   - Implement Cascade-suggested fix
+   - Test fix thoroughly
+   - Verify error is resolved
+
+5. **Document for Prevention**
+   - Add to error patterns if new
+   - Update tests to catch regression
+   - Share learnings with team
+
+## Output
+
+- Root cause analysis
+- Fix recommendations
+- Debug session logs
+- Prevention strategies
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Debugger not attaching | Port conflict | Check debug port, kill conflicting processes |
+| Breakpoint not hitting | Source maps issue | Verify source maps, rebuild |
+| Variable undefined | Wrong scope | Check breakpoint location, scope context |
+| Cascade missing context | Insufficient code shared | Include more relevant files |
+| Fix introduced regression | Incomplete analysis | Add more test coverage, review fix scope |
+
+## Examples
+
+**Example: Analyze Stack Trace**
+Request: "Why am I getting TypeError: Cannot read property 'map' of undefined?"
+Result: Analysis shows API response changed format, suggests defensive coding
+
+**Example: Debug Race Condition**
+Request: "Help find intermittent bug in user authentication"
+Result: Identifies race condition in token refresh, suggests async fix
+
+**Example: Memory Leak Investigation**
+Request: "Application memory grows over time, help find the leak"
+Result: Identifies event listener not being cleaned up, shows fix
+
+## Resources
+
+- [Windsurf Debugging Guide](https://docs.windsurf.ai/features/debugging)
+- [AI-Assisted Debugging](https://docs.windsurf.ai/cascade/debugging)
+- [Debug Configuration Reference](https://docs.windsurf.ai/reference/debug-config)
 
 ## Success Criteria
 

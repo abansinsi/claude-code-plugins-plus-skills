@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Create optimized Dockerfiles with AI-driven best practices.
 
+## Overview
+
+This skill enables AI-assisted Docker configuration within Windsurf. Cascade analyzes your application to generate optimized Dockerfiles with multi-stage builds, minimal base images, proper layer caching, and security best practices. It supports Node.js, Python, Go, Java, and other common runtimes with framework-specific optimizations.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- Docker installed locally
+- Application with defined dependencies
+- Understanding of containerization concepts
+- Target deployment environment defined
+
 ## Directory Structure
 
 ```
@@ -77,22 +89,69 @@ project-root/
 - Scan for vulnerabilities
 - No secrets in images
 
-## Configuration Steps
+## Instructions
 
 1. **Analyze Application**
-   - Identify dependencies
-   - Map build process
-   - Document runtime needs
+   - Identify runtime and dependencies
+   - Map build process steps
+   - Document runtime requirements
 
-2. **Generate Dockerfile**
+2. **Select Base Image**
+   - Choose minimal appropriate base
+   - Consider distroless or alpine variants
+   - Check for security vulnerabilities
+
+3. **Generate Dockerfile**
    - Use Cascade for initial generation
-   - Apply best practices
-   - Optimize for size
+   - Apply multi-stage build pattern
+   - Optimize layer ordering
 
-3. **Validate and Test**
-   - Build and run locally
+4. **Configure Security**
+   - Add non-root user
+   - Remove unnecessary tools
+   - Set appropriate permissions
+
+5. **Test and Validate**
+   - Build image locally
    - Check image size
    - Run security scans
+
+## Output
+
+- Optimized production Dockerfile
+- Development Dockerfile with dev tools
+- docker-compose.yml for orchestration
+- .dockerignore for build optimization
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Build failed | Missing dependencies | Check COPY commands, verify paths |
+| Large image size | Unoptimized layers | Use multi-stage, add .dockerignore |
+| Permission denied | Wrong user context | Set proper USER and permissions |
+| Cache not working | Layer ordering | Reorder commands, dependencies first |
+| Security scan fails | Vulnerable base | Update base image, patch vulnerabilities |
+
+## Examples
+
+**Example: Generate Node.js Dockerfile**
+Request: "Create optimized Dockerfile for our Express.js API"
+Result: Multi-stage build with npm ci, non-root user, alpine base
+
+**Example: Python ML Application**
+Request: "Containerize our Python machine learning service"
+Result: Multi-stage build with virtual env, optimized requirements, GPU support
+
+**Example: Development Setup**
+Request: "Create Docker setup for local development with hot reload"
+Result: Dockerfile.dev with mounted volumes, docker-compose.dev.yml
+
+## Resources
+
+- [Windsurf Docker Guide](https://docs.windsurf.ai/features/docker)
+- [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [Container Security Guide](https://docs.windsurf.ai/guides/container-security)
 
 ## Success Criteria
 

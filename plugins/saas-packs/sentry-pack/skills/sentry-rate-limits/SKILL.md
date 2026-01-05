@@ -187,6 +187,33 @@ Sentry.init({
 });
 ```
 
+## Prerequisites
+- Understanding of current event volume
+- Sentry billing plan known
+- High-volume endpoints identified
+- Noisy error patterns documented
+
+## Output
+- Optimized sample rates configured
+- Rate limiting rules applied
+- Event filtering implemented
+- Quota usage monitoring setup
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `429 Too Many Requests` | Rate limit exceeded | Implement client-side sampling |
+| `Quota exhausted` | Event volume too high | Enable inbound filters and reduce sample rates |
+| `Critical errors missed` | Over-aggressive filtering | Always capture fatal errors at 100% |
+| `Billing spike` | Sudden traffic increase | Set up spend alerts and rate limits |
+
+## Examples
+
+**Example: Handle Rate Limit Hit**
+Request: "We're getting 429 errors from Sentry"
+Result: Implement adaptive sampling, add ignoreErrors patterns, enable server-side inbound filters.
+
 ## Resources
 - [Sentry Quota Management](https://docs.sentry.io/product/accounts/quotas/)
 - [Sampling Strategies](https://docs.sentry.io/platforms/javascript/configuration/sampling/)

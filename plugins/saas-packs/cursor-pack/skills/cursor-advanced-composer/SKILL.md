@@ -329,3 +329,51 @@ If Composer generates incorrect code:
 5. Try smaller scope
 6. Switch to manual + inline edit
 ```
+
+## Prerequisites
+
+- Cursor IDE with Composer feature access
+- Understanding of project structure and patterns
+- Well-configured .cursorrules file
+- Indexed codebase for @-mention references
+
+## Instructions
+
+1. Open Composer with Cmd+I (Mac) or Ctrl+I (Windows)
+2. Describe the feature or changes needed
+3. Reference existing patterns with @-mentions
+4. Specify file structure and naming conventions
+5. Review each proposed change before applying
+6. Apply changes incrementally, testing between phases
+
+## Output
+
+- Multiple coordinated file changes
+- Generated feature modules with consistent patterns
+- Refactored codebase following specified patterns
+- Complete test coverage for generated code
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Composer not finding files | Wrong path or file excluded | Use explicit paths with @-mentions |
+| Changes not as expected | Prompt too vague | Be more specific, provide examples |
+| Composer timeout | Request too large | Break into smaller requests |
+| Conflicting edits | Multiple files with dependencies | Apply changes sequentially, review carefully |
+
+## Examples
+
+**Example: Generate Complete Feature Module**
+Request: "Create an order management feature with types, service, API routes, hooks, and tests following patterns in @services/userService.ts"
+Result: Composer generates 6+ coordinated files with consistent patterns
+
+**Example: Architecture Migration**
+Request: "Migrate from Redux to Zustand in all components"
+Result: Creates new stores, updates component imports, removes Redux dependencies
+
+## Resources
+
+- [Cursor Composer Documentation](https://cursor.com/docs/composer)
+- [Multi-File Editing Best Practices](https://cursor.com/docs/best-practices)
+- [Cursor Community Tips](https://forum.cursor.com/)

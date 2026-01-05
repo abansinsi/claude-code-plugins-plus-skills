@@ -208,6 +208,33 @@ sentry-cli releases finalize $VERSION
 echo "Release $VERSION created successfully"
 ```
 
+## Prerequisites
+- Sentry CLI installed (`npm install -g @sentry/cli`)
+- `SENTRY_AUTH_TOKEN` environment variable set
+- `SENTRY_ORG` and `SENTRY_PROJECT` configured
+- Source maps available in build output
+
+## Output
+- Release created with version identifier
+- Commits associated with release
+- Source maps uploaded
+- Release finalized and ready
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Release already exists` | Duplicate version | Use unique version (git SHA or timestamp) |
+| `Failed to set commits` | Repository not connected | Install Sentry GitHub/GitLab integration |
+| `Source map upload failed` | Auth token expired | Generate new token in Sentry settings |
+| `Release not visible in SDK` | Version mismatch | Ensure `release` in SDK matches CLI version |
+
+## Examples
+
+**Example: Semantic Versioning Release**
+Request: "Create release using package.json version"
+Result: `sentry-cli releases new myapp@1.2.3` with commits and source maps.
+
 ## Resources
 - [Sentry Releases](https://docs.sentry.io/product/releases/)
 - [Sentry CLI Releases](https://docs.sentry.io/product/cli/releases/)

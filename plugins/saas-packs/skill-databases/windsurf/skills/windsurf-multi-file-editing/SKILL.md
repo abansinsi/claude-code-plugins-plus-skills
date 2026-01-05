@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Execute coordinated changes across multiple files with Cascade assistance.
 
+## Overview
+
+This skill enables coordinated multi-file editing operations within Windsurf using Cascade AI. It provides atomic changes across multiple files, ensuring consistency when renaming symbols, moving code, or making cross-file refactoring changes. The skill handles dependency tracking, preview generation, and rollback capabilities for safe multi-file operations.
+
+## Prerequisites
+
+- Windsurf IDE installed and configured
+- Active Cascade AI subscription
+- Project workspace initialized with `.windsurf/` directory
+- Git or version control for rollback safety
+- Understanding of project file structure and dependencies
+
 ## Directory Structure
 
 ```
@@ -71,22 +83,69 @@ project-root/
 - Syntax validation per file
 - Reference integrity checking
 
-## Configuration Steps
+## Instructions
 
 1. **Scope the Operation**
-   - Identify all affected files
-   - Map dependencies
-   - Plan change order
+   - Identify all affected files using search/grep
+   - Map file dependencies and import relationships
+   - Plan change order based on dependencies
 
-2. **Execute with Preview**
-   - Generate change preview
-   - Review all modifications
-   - Apply atomically
+2. **Configure Operation Template**
+   - Select appropriate template (rename, move, extract)
+   - Define find/replace patterns or transformations
+   - Set file scope and exclusion rules
 
-3. **Verify Results**
-   - Run syntax checks
-   - Execute tests
-   - Validate references
+3. **Generate Preview**
+   - Run Cascade analysis on affected files
+   - Review all proposed modifications
+   - Verify no unintended changes
+
+4. **Execute with Preview**
+   - Apply changes atomically across all files
+   - Cascade validates syntax after each change
+   - Monitor progress in edit-history.json
+
+5. **Verify Results**
+   - Run syntax checks on modified files
+   - Execute test suite to catch regressions
+   - Validate all references resolve correctly
+
+## Output
+
+- Modified files with consistent changes applied
+- `edit-history.json` log with operation details
+- Rollback snapshot for recovery if needed
+- Validation report with syntax check results
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Circular dependency detected | Files have mutual imports | Break cycle by extracting shared code |
+| Syntax error after edit | Invalid code generated | Review template patterns, use rollback |
+| Reference not found | Missing import or export | Check file scope includes all references |
+| Operation timeout | Too many files affected | Split into smaller batches |
+| Rollback failed | Git state inconsistent | Manual recovery from edit-history.json |
+
+## Examples
+
+**Example: Rename Component Across Project**
+Request: "Rename UserCard component to ProfileCard across all files"
+Result: Updates component file, test file, all imports, and barrel exports atomically
+
+**Example: Extract Utility Function**
+Request: "Extract formatDate function from utils.ts to date-utils.ts"
+Result: Creates new file, moves function, updates all import statements
+
+**Example: Move Component to New Directory**
+Request: "Move Button component from components/ to ui/components/"
+Result: Relocates files, updates all relative imports, maintains test associations
+
+## Resources
+
+- [Windsurf Multi-File Editing Documentation](https://docs.windsurf.ai/features/multi-file-editing)
+- [Cascade AI Coordination Guide](https://docs.windsurf.ai/cascade/coordination)
+- [Atomic Operations Best Practices](https://docs.windsurf.ai/best-practices/atomic-ops)
 
 ## Success Criteria
 

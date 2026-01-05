@@ -372,3 +372,51 @@ Solutions:
 3. Report to Cursor/extension devs
 4. Reduce open files
 ```
+
+## Prerequisites
+
+- Cursor IDE installed
+- Access to Cursor settings
+- System monitoring tools available
+- Understanding of extensions and processes
+
+## Instructions
+
+1. Use Process Explorer to identify bottlenecks
+2. Disable visual features for performance gains
+3. Configure file watcher exclusions
+4. Audit and disable heavy extensions
+5. Optimize AI feature settings
+6. Set up aggressive .cursorignore
+
+## Output
+
+- Improved editor performance
+- Reduced CPU and memory usage
+- Faster AI completions
+- Optimized indexing configuration
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Cursor unresponsive | Extension or process issue | Start with --disable-extensions |
+| High CPU constantly | Runaway process or indexing | Check Process Explorer, add exclusions |
+| Slow completions | Model or network | Switch to faster model, check connection |
+| High memory usage | Too many open files | Close tabs, restart Cursor |
+
+## Examples
+
+**Example: Optimize Large Monorepo**
+Request: "Cursor is slow with our large codebase"
+Result: Configure .cursorignore, watcher exclusions, and selective indexing
+
+**Example: Extension Audit**
+Request: "Find which extension is causing performance issues"
+Result: Use Process Explorer to identify and disable problematic extension
+
+## Resources
+
+- [Cursor Performance Guide](https://cursor.com/docs/performance)
+- [VS Code Performance](https://code.visualstudio.com/docs/editor/editingevolved#_performance)
+- [Extension Performance Tips](https://cursor.com/docs/extensions)

@@ -245,3 +245,51 @@ cat ~/.cursor/logs/main.log >> cursor-debug.txt
 | Context overflow | Start new chat |
 | Indexing issues | Re-index codebase |
 | Auth problems | Sign out and back in |
+
+## Prerequisites
+
+- Cursor IDE with AI features active
+- Understanding of AI behavior factors
+- Access to settings and developer tools
+- Ability to view and export logs
+
+## Instructions
+
+1. Identify the type of AI issue (completion, chat, composer)
+2. Check common causes (context, rules, model)
+3. Use debugging tools (dev tools, verbose logging)
+4. Test with different models and settings
+5. Apply fix and verify improvement
+6. Document solution for future reference
+
+## Output
+
+- Identified root cause of AI issues
+- Improved AI suggestion quality
+- Updated configuration if needed
+- Documented debugging process
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| AI suggestions wrong | Context pollution or vague prompts | Start new chat, be more specific |
+| Completions not appearing | Rate limit or settings | Check status bar, verify settings |
+| Composer not finding files | Wrong path or excluded | Use explicit @-mentions |
+| Rules not applied | File location or syntax | Verify .cursorrules at root, check YAML |
+
+## Examples
+
+**Example: Debugging Poor Completions**
+Request: "Completions are suggesting outdated patterns"
+Result: Update .cursorrules with current patterns, re-index codebase
+
+**Example: Chat Context Issues**
+Request: "AI forgets what we discussed earlier"
+Result: Context overflow - start new chat, re-state important context
+
+## Resources
+
+- [Cursor Debug Guide](https://cursor.com/docs/debugging)
+- [AI Troubleshooting](https://cursor.com/docs/troubleshooting)
+- [Cursor GitHub Issues](https://github.com/getcursor/cursor/issues)

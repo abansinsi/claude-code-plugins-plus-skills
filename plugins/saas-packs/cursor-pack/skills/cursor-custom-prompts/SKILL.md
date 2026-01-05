@@ -347,3 +347,51 @@ Prompt refinement cycle:
 
 Track effective prompts for reuse
 ```
+
+## Prerequisites
+
+- Cursor IDE with Chat or Composer
+- Understanding of prompt engineering basics
+- Project with existing patterns to reference
+- .cursorrules file for persistent prompts
+
+## Instructions
+
+1. Structure prompt with context, task, constraints
+2. Include specific requirements and formats
+3. Reference existing patterns with @-mentions
+4. Start with simple prompt, iterate for complexity
+5. Store effective prompts in .cursorrules
+6. Refine based on output quality
+
+## Output
+
+- Effective prompt templates
+- Consistent AI output quality
+- Reusable prompt patterns
+- Project-specific prompt library
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Generic output | Vague prompt | Add specifics, constraints, examples |
+| Wrong format | Format not specified | Include explicit format requirements |
+| Missing requirements | Incomplete prompt | Add full requirements list |
+| Inconsistent results | Different prompting styles | Standardize templates, use .cursorrules |
+
+## Examples
+
+**Example: Code Generation Template**
+Request: Use structured template with context, tech stack, requirements, patterns
+Result: Consistent, high-quality code matching project standards
+
+**Example: Chain-of-Thought Debugging**
+Request: "Step by step: 1. Analyze the error, 2. Find root cause, 3. Propose fix"
+Result: Thorough debugging with explained reasoning
+
+## Resources
+
+- [Prompt Engineering Guide](https://cursor.com/docs/prompting)
+- [.cursorrules Reference](https://cursor.com/docs/rules)
+- [Cursor Community Prompts](https://forum.cursor.com/c/prompts)

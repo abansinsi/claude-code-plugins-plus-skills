@@ -360,6 +360,33 @@ export default {
 | Event-Driven | Project per domain | Message-based | High |
 | Multi-Tenant | Per-tenant or tags | Tenant-aware | Medium |
 
+## Prerequisites
+- Application architecture documented
+- Service inventory available
+- Team ownership defined
+- Deployment model understood
+
+## Output
+- Architecture-appropriate Sentry configuration
+- Project structure matching application topology
+- Distributed tracing configured
+- Team-based access controls
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Traces not connecting` | Message queue header loss | Propagate trace context in message metadata |
+| `Lambda cold start issues` | SDK init too slow | Use @sentry/serverless with proper wrapping |
+| `Multi-tenant data leak` | Missing tenant isolation | Add tenant_id tag to all events |
+| `Edge function errors missing` | SDK not supported | Use platform-specific Sentry SDK |
+
+## Examples
+
+**Example: Microservices to Sentry Mapping**
+Request: "Design Sentry architecture for 15 microservices"
+Result: One project per service, distributed tracing with baggage headers, team ownership per domain.
+
 ## Resources
 - [Sentry Architecture Guide](https://docs.sentry.io/product/sentry-basics/integrate-backend/)
 - [Distributed Tracing](https://docs.sentry.io/product/performance/distributed-tracing/)

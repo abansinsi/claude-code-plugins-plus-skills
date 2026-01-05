@@ -194,6 +194,33 @@ Sentry.init({
 - [ ] Team permissions reviewed
 - [ ] Old DSN keys disabled
 
+## Prerequisites
+- Security requirements documented
+- Compliance standards identified (GDPR, SOC 2, HIPAA)
+- Sensitive data patterns known
+- Access control needs defined
+
+## Output
+- Data scrubbing configured
+- DSN secured in environment variables
+- Access controls implemented
+- Security checklist completed
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `PII in events` | Scrubbing rules incomplete | Add patterns to beforeSend and server rules |
+| `DSN exposed in repo` | Hardcoded value | Move to environment variable immediately |
+| `Unauthorized API access` | Token too permissive | Create scoped tokens with minimal permissions |
+| `Audit log gaps` | Events not being tracked | Enable audit logging in organization settings |
+
+## Examples
+
+**Example: GDPR Security Setup**
+Request: "Configure Sentry for GDPR compliance"
+Result: PII scrubbing enabled, IP anonymization active, data retention set, consent handling implemented.
+
 ## Resources
 - [Sentry Security](https://docs.sentry.io/product/security/)
 - [Data Privacy](https://docs.sentry.io/platforms/javascript/data-management/)

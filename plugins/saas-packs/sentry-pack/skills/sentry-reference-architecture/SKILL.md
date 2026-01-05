@@ -255,6 +255,33 @@ devops-team:
 6. **Team-based alert routing**
 7. **Release tracking** for every deploy
 
+## Prerequisites
+- Sentry organization created
+- Team structure defined
+- Service inventory documented
+- Alert escalation paths established
+
+## Output
+- Project structure following best practices
+- Centralized SDK configuration module
+- Distributed tracing configured across services
+- Alert routing rules defined
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Cross-service traces broken` | Headers not propagated | Ensure trace headers included in service calls |
+| `Too many projects` | Over-fragmentation | Consolidate projects by service domain |
+| `Alert routing incorrect` | Missing team assignment | Associate projects with owning teams |
+| `Inconsistent tagging` | No shared config | Use centralized SDK configuration package |
+
+## Examples
+
+**Example: Microservices Architecture Setup**
+Request: "Design Sentry architecture for 10 microservices"
+Result: One project per service, distributed tracing enabled, team-based alert routing configured.
+
 ## Resources
 - [Sentry Best Practices](https://docs.sentry.io/product/issues/best-practices/)
 - [Distributed Tracing](https://docs.sentry.io/product/performance/distributed-tracing/)

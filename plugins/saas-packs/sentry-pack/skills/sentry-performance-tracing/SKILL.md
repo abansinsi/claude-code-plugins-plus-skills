@@ -193,6 +193,15 @@ async def get_users():
     return users
 ```
 
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `No transactions in dashboard` | `tracesSampleRate` is 0 | Set sample rate > 0 |
+| `Spans not linked to transactions` | Missing scope configuration | Use `configureScope` to set current span |
+| `Distributed trace broken` | Missing headers | Ensure `sentry-trace` and `baggage` headers propagate |
+| `Performance tab empty` | Plan doesn't include performance | Upgrade Sentry plan or enable performance feature |
+
 ## Resources
 - [Sentry Performance](https://docs.sentry.io/product/performance/)
 - [Distributed Tracing](https://docs.sentry.io/product/performance/distributed-tracing/)

@@ -290,3 +290,51 @@ cursor --reset-user-data --disable-extensions
 # Open Command Palette > "Cursor: Reindex Current File"
 # Open Command Palette > "Cursor: Reindex Folder"
 ```
+
+## Prerequisites
+
+- Cursor IDE with indexing enabled
+- Access to Cursor settings
+- Command line access for cache clearing
+- Understanding of project file structure
+
+## Instructions
+
+1. Check indexing status in status bar
+2. Identify the specific issue (stuck, empty results, performance)
+3. Review and update `.cursorignore` configuration
+4. Try manual refresh via Command Palette
+5. Clear index cache if issues persist
+6. Restart Cursor and allow re-indexing
+
+## Output
+
+- Functional codebase indexing
+- Working `@codebase` search queries
+- Optimized indexing performance
+- Properly configured exclusion patterns
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Indexing never completes | Large directories not excluded | Add node_modules, .git, build to .cursorignore |
+| @codebase returns nothing | File not indexed or excluded | Check .cursorignore, verify file type supported |
+| High CPU during indexing | Too many files or workers | Reduce index.workers setting, exclude more files |
+| Index outdated after changes | File watcher not updating | Manual refresh or check watcher exclusions |
+
+## Examples
+
+**Example: Fixing Stuck Indexing**
+Request: "My Cursor indexing has been stuck at 45% for an hour"
+Result: Cancel indexing, add large directories to .cursorignore, restart indexing
+
+**Example: Troubleshooting Empty Search Results**
+Request: "@codebase isn't finding any of my functions"
+Result: Verify indexing complete, check file not excluded, test with specific @filename
+
+## Resources
+
+- [Cursor Indexing Documentation](https://cursor.com/docs/indexing)
+- [File Watcher Configuration](https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc)
+- [Cursor GitHub Issues](https://github.com/getcursor/cursor/issues)

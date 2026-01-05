@@ -392,3 +392,53 @@ Frequency:
 - Annually: Full audit report
 - Ad-hoc: Incident reports
 ```
+
+## Prerequisites
+
+- Cursor Business or Enterprise subscription
+- Understanding of compliance requirements (SOC 2, GDPR, HIPAA)
+- Admin access to Cursor organization
+- Audit tools and documentation templates
+
+## Instructions
+
+1. Review Cursor's compliance certifications
+2. Conduct access control audit
+3. Verify data protection settings
+4. Document configuration and policies
+5. Run security scanning tools
+6. Generate audit report and remediation plan
+
+## Output
+
+- Compliance audit report
+- Access control documentation
+- Data protection verification
+- Remediation plan for findings
+- Stakeholder communication
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Missing audit logs | Feature not enabled or retained | Enable audit logging, extend retention |
+| Secrets found in code | .cursorignore incomplete | Update exclusions, rotate secrets |
+| Stale user accounts | No offboarding process | Implement regular access reviews |
+| Missing documentation | Incomplete policies | Create and maintain policy documents |
+
+## Examples
+
+**Example: SOC 2 Audit Preparation**
+Request: "Prepare Cursor configuration for SOC 2 audit"
+Result: Access controls documented, security settings verified, evidence collected
+
+**Example: GDPR Compliance Check**
+Request: "Verify GDPR compliance for Cursor usage"
+Result: Data processing documented, subject rights procedures verified
+
+## Resources
+
+- [Cursor Security Page](https://cursor.com/security)
+- [Cursor Privacy Policy](https://cursor.com/privacy)
+- [SOC 2 Documentation](https://cursor.com/docs/compliance)
+- [GDPR Compliance Guide](https://cursor.com/docs/gdpr)

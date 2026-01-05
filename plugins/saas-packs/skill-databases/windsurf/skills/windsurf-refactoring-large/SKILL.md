@@ -14,6 +14,19 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Execute complex refactoring operations with Cascade AI coordination.
 
+## Overview
+
+This skill enables large-scale refactoring operations that span hundreds or thousands of files. It provides phased execution with checkpoints, comprehensive rollback capabilities, and AI-assisted planning. Ideal for architecture migrations, API version upgrades, dependency replacements, and codebase modernization efforts that would traditionally take weeks to complete manually.
+
+## Prerequisites
+
+- Windsurf IDE with Enterprise or Pro subscription
+- Active Cascade AI connection
+- Git repository with clean working state
+- Comprehensive test suite for validation
+- Backup strategy for critical code paths
+- Team coordination for multi-developer codebases
+
 ## Directory Structure
 
 ```
@@ -90,27 +103,75 @@ project-root/
 - Checkpoint creation
 - Validation at each step
 
-## Configuration Steps
+## Instructions
 
 1. **Analyze Scope**
-   - Map affected files
-   - Identify dependencies
-   - Assess risks
+   - Run Cascade analysis on target patterns
+   - Map all affected files and dependencies
+   - Identify high-risk areas and critical paths
+   - Generate risk assessment report
 
 2. **Create Plan**
-   - Define phases
-   - Set checkpoints
-   - Plan rollback
+   - Define phases based on dependency order
+   - Set validation checkpoints between phases
+   - Create rollback procedures for each phase
+   - Document success criteria per phase
 
-3. **Execute with Cascade**
-   - Apply changes incrementally
-   - Validate at checkpoints
-   - Track progress
+3. **Prepare Environment**
+   - Add tests for untested code paths
+   - Create pre-refactor snapshot
+   - Verify rollback process works
+   - Coordinate with team on freeze periods
 
-4. **Verify Completion**
-   - Run all tests
-   - Compare performance
-   - Update documentation
+4. **Execute with Cascade**
+   - Apply changes incrementally by phase
+   - Validate at each checkpoint
+   - Track progress in phase files
+   - Pause and review at milestones
+
+5. **Verify Completion**
+   - Run complete test suite
+   - Compare performance metrics to baseline
+   - Update documentation for changed APIs
+   - Archive refactoring artifacts
+
+## Output
+
+- Refactored codebase with all patterns migrated
+- Phase completion reports with metrics
+- Before/after performance comparison
+- Updated documentation and API references
+- Archived rollback artifacts (kept 30 days)
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Checkpoint validation failed | Tests failing at checkpoint | Rollback to previous checkpoint, fix issues |
+| Dependency conflict | Changed code breaks downstream | Map full dependency tree, adjust order |
+| Performance regression | Refactored code slower | Profile and optimize before proceeding |
+| Merge conflict | Parallel development | Coordinate freeze window, rebase plan |
+| Rollback incomplete | Partial state restoration | Use backup files, manual intervention |
+
+## Examples
+
+**Example: API Version Migration**
+Request: "Migrate all API v1 calls to v2 across the codebase"
+Result: Phased migration with compatibility layer, gradual cutover, and v1 deprecation
+
+**Example: Framework Upgrade**
+Request: "Upgrade React class components to functional components with hooks"
+Result: Systematic conversion with state migration, lifecycle method translation, and test updates
+
+**Example: Architecture Restructure**
+Request: "Move from monolithic services to domain-driven modules"
+Result: Code reorganization with dependency injection, interface extraction, and module boundaries
+
+## Resources
+
+- [Windsurf Large Refactoring Guide](https://docs.windsurf.ai/features/large-refactoring)
+- [Phased Execution Best Practices](https://docs.windsurf.ai/best-practices/phased-execution)
+- [Rollback and Recovery](https://docs.windsurf.ai/features/rollback)
 
 ## Success Criteria
 

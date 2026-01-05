@@ -323,6 +323,33 @@ setInterval(() => {
 }, 60000);
 ```
 
+## Prerequisites
+- High-traffic application metrics available
+- Sentry quota and billing understood
+- Performance baseline established
+- Event volume estimates calculated
+
+## Output
+- Optimized sampling configuration
+- Quota management strategy
+- Cost-efficient event capture
+- Scalable Sentry integration
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `429 Rate Limited` | Exceeding rate limits | Implement adaptive sampling |
+| `Quota exhausted mid-month` | Uncontrolled volume | Set project rate limits and budget alerts |
+| `High memory usage` | Large event buffer | Reduce `maxBreadcrumbs` and event size |
+| `Events dropped silently` | Buffer overflow | Implement offline queue with persistence |
+
+## Examples
+
+**Example: Scale to 1M Events/Month**
+Request: "Configure Sentry for 10M requests/day application"
+Result: 0.01% trace sampling, adaptive error sampling, quota monitoring, estimated 100K events/month.
+
 ## Resources
 - [Sentry Quotas](https://docs.sentry.io/product/accounts/quotas/)
 - [Performance Best Practices](https://docs.sentry.io/product/performance/)

@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Optimize Cascade context window for large codebases and complex projects.
 
+## Overview
+
+This skill enables advanced context management for Cascade AI in large-scale projects. It covers context prioritization, memory persistence across sessions, and optimization strategies for codebases with hundreds or thousands of files. Proper context management ensures Cascade maintains accurate understanding of your project architecture and conventions during extended development sessions.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- Large codebase (50+ files)
+- Project documentation available
+- Understanding of project architecture
+- Clear identification of critical code paths
+
 ## Directory Structure
 
 ```
@@ -71,22 +83,69 @@ project-root/
 - Reference documentation inline
 - Maintain dependency graph awareness
 
-## Configuration Steps
+## Instructions
 
 1. **Map Project Structure**
-   - Create module index
-   - Document dependencies
-   - Identify critical paths
+   - Create module-index.md with directory mappings
+   - Document inter-module dependencies
+   - Identify critical code paths
 
 2. **Configure Context Priorities**
-   - Pin essential files
-   - Set relevance weights
-   - Configure memory limits
+   - Pin essential files in pinned-context.json
+   - Set relevance weights for file types
+   - Configure context window limits
 
-3. **Optimize for Workflow**
-   - Adjust context window size
-   - Configure persistence settings
-   - Set up context preloading
+3. **Create Context Documentation**
+   - Write project-overview.md with architecture
+   - Document conventions in conventions.md
+   - Maintain api-surface.md for public interfaces
+
+4. **Optimize for Workflow**
+   - Adjust context window size based on needs
+   - Configure memory persistence settings
+   - Set up context preloading for common tasks
+
+5. **Monitor and Refine**
+   - Review context usage patterns
+   - Remove stale context items
+   - Update priorities based on workflow
+
+## Output
+
+- Optimized context configuration
+- Project context documentation
+- Module index for navigation
+- Session state persistence
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Context overflow | Too many files loaded | Reduce priority of non-essential files |
+| Stale context | Outdated information | Clear session state, refresh context |
+| Missing relationships | Incomplete module index | Update module-index.md with dependencies |
+| Slow responses | Context too large | Prioritize critical files, remove redundant |
+| Cross-module confusion | Missing dependency info | Add inter-module relationships to index |
+
+## Examples
+
+**Example: Configure Large Monorepo**
+Request: "Set up context management for our 500+ file monorepo"
+Result: Module index with service boundaries, pinned shared utilities, context priorities
+
+**Example: Pin Critical Files**
+Request: "Ensure database schema and API types are always in context"
+Result: Files added to pinned-context.json with high priority
+
+**Example: Optimize for Backend Work**
+Request: "Configure context for backend development focus"
+Result: Backend modules prioritized, frontend de-prioritized, API docs pinned
+
+## Resources
+
+- [Windsurf Context Management](https://docs.windsurf.ai/features/context)
+- [Large Codebase Best Practices](https://docs.windsurf.ai/guides/large-codebases)
+- [Memory Persistence Configuration](https://docs.windsurf.ai/features/memory)
 
 ## Success Criteria
 

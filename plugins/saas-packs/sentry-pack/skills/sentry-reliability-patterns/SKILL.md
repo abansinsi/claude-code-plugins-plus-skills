@@ -390,6 +390,33 @@ app.get('/health/sentry', async (req, res) => {
 });
 ```
 
+## Prerequisites
+- Understanding of failure modes
+- Fallback logging strategy
+- Network reliability characteristics
+- Graceful shutdown requirements
+
+## Output
+- Graceful degradation implemented
+- Circuit breaker pattern applied
+- Offline queue configured
+- Dual-write reliability enabled
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `SDK init failure crashes app` | No try/catch around init | Wrap init with fallback handling |
+| `Events lost on network failure` | No offline queue | Implement retry with backoff |
+| `Blocking request handling` | Awaiting Sentry capture | Use fire-and-forget pattern |
+| `Shutdown losing events` | No flush before exit | Call Sentry.close() on SIGTERM |
+
+## Examples
+
+**Example: Implement Circuit Breaker**
+Request: "Prevent Sentry failures from affecting application"
+Result: Circuit breaker opens after 5 failures, skips Sentry calls for 1 minute, auto-recovers on success.
+
 ## Resources
 - [Sentry Configuration](https://docs.sentry.io/platforms/javascript/configuration/)
 - [Transport Options](https://docs.sentry.io/platforms/javascript/configuration/transports/)

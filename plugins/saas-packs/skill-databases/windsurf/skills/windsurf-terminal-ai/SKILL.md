@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Leverage AI-assisted terminal commands for efficient debugging and operations.
 
+## Overview
+
+This skill enables AI-assisted terminal operations within Windsurf. Cascade can suggest commands, explain error messages, generate complex shell scripts, and help debug terminal output. It understands common CLI tools, build systems, and DevOps commands to provide contextually relevant assistance for command-line workflows.
+
+## Prerequisites
+
+- Windsurf IDE with integrated terminal
+- Shell environment configured (bash, zsh, etc.)
+- Understanding of command-line basics
+- Project-specific CLI tools installed
+- PATH configured for required tools
+
 ## Directory Structure
 
 ```
@@ -67,22 +79,69 @@ project-root/
 - Stack trace navigation
 - Environment diagnostics
 
-## Configuration Steps
+## Instructions
 
 1. **Enable AI Assistance**
-   - Configure terminal integration
-   - Set up completion triggers
+   - Configure terminal AI integration
+   - Set up suggestion triggers
    - Enable error analysis
 
-2. **Build Command Library**
+2. **Configure Command Library**
    - Document common commands
    - Create reusable scripts
-   - Set up aliases
+   - Set up aliases for frequent tasks
 
-3. **Optimize Workflows**
-   - Identify repetitive patterns
+3. **Set Up Error Handling**
+   - Enable error forwarding to Cascade
+   - Configure log collection
+   - Set up diagnostics scripts
+
+4. **Optimize Workflows**
+   - Identify repetitive command patterns
    - Automate common sequences
-   - Set up command templates
+   - Create parameterized templates
+
+5. **Build Team Knowledge**
+   - Share useful commands
+   - Document project-specific CLIs
+   - Create onboarding scripts
+
+## Output
+
+- Command suggestions and completions
+- Error analysis and fixes
+- Optimized command aliases
+- Reusable shell scripts
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Command not found | Missing tool or PATH | Install tool or update PATH |
+| Permission denied | Insufficient rights | Use sudo or fix permissions |
+| Syntax error | Malformed command | Review command syntax with Cascade |
+| Network timeout | Connectivity issue | Check network, retry with timeout |
+| Script failed | Logic or environment error | Debug with set -x, check variables |
+
+## Examples
+
+**Example: Debug Failed Command**
+Request: "npm install failed with ENOENT error"
+Result: Analysis shows missing directory, suggests mkdir or path fix
+
+**Example: Generate Complex Command**
+Request: "Find all files modified in last 24 hours over 1MB"
+Result: `find . -type f -mtime -1 -size +1M -exec ls -lh {} \;`
+
+**Example: Script Generation**
+Request: "Create script to backup database and upload to S3"
+Result: Shell script with pg_dump, compression, aws s3 cp with error handling
+
+## Resources
+
+- [Windsurf Terminal Guide](https://docs.windsurf.ai/features/terminal)
+- [AI Command Assistance](https://docs.windsurf.ai/cascade/terminal)
+- [Shell Scripting Best Practices](https://docs.windsurf.ai/guides/shell-scripts)
 
 ## Success Criteria
 

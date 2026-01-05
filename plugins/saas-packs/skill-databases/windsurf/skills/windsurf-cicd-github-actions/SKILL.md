@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Generate and maintain GitHub Actions workflows with Cascade AI assistance.
 
+## Overview
+
+This skill enables AI-assisted CI/CD workflow creation within Windsurf. Cascade can generate GitHub Actions workflows from project requirements, optimize existing pipelines, debug workflow failures, and implement security best practices. It understands common CI/CD patterns and can create workflows for testing, building, and deploying applications.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- GitHub repository with write access
+- Understanding of CI/CD concepts
+- GitHub Actions enabled on repository
+- Deployment targets configured (if applicable)
+
 ## Directory Structure
 
 ```
@@ -80,22 +92,69 @@ project-root/
 - Blue-green deployment
 - Health checks
 
-## Configuration Steps
+## Instructions
 
-1. **Analyze Project Requirements**
-   - Identify build steps
-   - Map test commands
-   - Document deploy targets
+1. **Analyze Requirements**
+   - Identify build and test steps
+   - Map deployment targets
+   - Document secret requirements
 
 2. **Generate Workflows**
    - Use Cascade for initial generation
-   - Customize for project needs
+   - Customize triggers and conditions
    - Add environment variables
 
-3. **Test and Iterate**
-   - Run workflows locally (act)
+3. **Configure Secrets**
+   - Set up repository secrets
+   - Document secret purposes
+   - Plan rotation schedule
+
+4. **Test Workflows**
+   - Run workflows on test branches
    - Debug failures with Cascade
    - Optimize for speed
+
+5. **Deploy and Monitor**
+   - Enable on main branch
+   - Set up failure notifications
+   - Monitor execution times
+
+## Output
+
+- GitHub Actions workflow files
+- Reusable action definitions
+- Secrets documentation
+- CODEOWNERS configuration
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Workflow syntax error | Invalid YAML | Validate with actionlint or yamllint |
+| Secret not found | Missing repository secret | Add secret in repository settings |
+| Permission denied | Insufficient GITHUB_TOKEN | Add required permissions to workflow |
+| Cache miss | Cache key mismatch | Update cache key pattern |
+| Deploy failed | Environment misconfiguration | Check environment secrets and settings |
+
+## Examples
+
+**Example: Generate CI Workflow**
+Request: "Create CI workflow for Node.js with TypeScript"
+Result: Workflow with checkout, cache, install, lint, test, build steps
+
+**Example: Add Deployment Stage**
+Request: "Add staging and production deployment to our pipeline"
+Result: CD workflow with environment-specific jobs, approval gates
+
+**Example: Debug Workflow Failure**
+Request: "Our CI workflow is failing at the test step"
+Result: Analysis of failure, fix for environment variable or dependency issue
+
+## Resources
+
+- [Windsurf CI/CD Guide](https://docs.windsurf.ai/features/cicd)
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [Workflow Syntax Reference](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
 
 ## Success Criteria
 

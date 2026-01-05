@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Configure Git workflows enhanced by Cascade AI assistance.
 
+## Overview
+
+This skill enables AI-assisted Git workflows within Windsurf. Cascade can generate commit messages from staged changes, suggest branch names, assist with merge conflict resolution, and automate common Git operations. It integrates with hooks for validation and provides intelligent suggestions that follow your team's conventions.
+
+## Prerequisites
+
+- Git installed and configured
+- Windsurf IDE with Cascade enabled
+- Git repository initialized
+- SSH keys or HTTPS credentials configured
+- Understanding of team Git workflow (GitFlow, trunk-based, etc.)
+
 ## Directory Structure
 
 ```
@@ -65,7 +77,7 @@ project-root/
 - Rebase guidance
 - Branch cleanup recommendations
 
-## Configuration Steps
+## Instructions
 
 1. **Configure Git Credentials**
    - Set up SSH or HTTPS authentication
@@ -73,14 +85,61 @@ project-root/
    - Set up commit signing (optional)
 
 2. **Set Up AI Assistance**
-   - Enable commit message suggestions
-   - Configure branch naming rules
+   - Enable commit message suggestions in settings
+   - Configure branch naming conventions in .windsurfrules
    - Set up PR template assistance
 
 3. **Install Git Hooks**
-   - Add pre-commit validation
-   - Configure commit message checks
-   - Set up pre-push gates
+   - Add pre-commit validation hook
+   - Configure commit-msg format checking
+   - Set up pre-push validation gates
+
+4. **Configure Team Standards**
+   - Document commit message conventions
+   - Define branch naming patterns
+   - Create PR templates
+
+5. **Train on Workflow**
+   - Let Cascade learn from existing history
+   - Refine suggestions based on feedback
+   - Update rules as patterns evolve
+
+## Output
+
+- Configured Git hooks
+- AI-assisted commit messages
+- Branch naming suggestions
+- PR descriptions with context
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Commit message rejected | Format validation failed | Follow conventional commits format |
+| Pre-commit hook failed | Lint or test errors | Fix errors before committing |
+| Push rejected | Branch protection rules | Create PR or request override |
+| Merge conflict | Divergent branches | Use Cascade for conflict resolution assistance |
+| Credential error | Auth expired or invalid | Refresh credentials, check SSH keys |
+
+## Examples
+
+**Example: Generate Commit Message**
+Request: "Generate commit message for staged changes"
+Result: "feat(auth): add OAuth2 support for Google login\n\nImplement Google OAuth2 flow with token refresh.\nCloses #123"
+
+**Example: Resolve Merge Conflict**
+Request: "Help resolve this merge conflict in user-service.ts"
+Result: Cascade analyzes both versions, suggests resolution based on context
+
+**Example: Create Feature Branch**
+Request: "Create branch for user profile feature"
+Result: Suggests "feature/user-profile-management" following team conventions
+
+## Resources
+
+- [Windsurf Git Integration](https://docs.windsurf.ai/features/git)
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [Git Hooks Documentation](https://git-scm.com/docs/githooks)
 
 ## Success Criteria
 

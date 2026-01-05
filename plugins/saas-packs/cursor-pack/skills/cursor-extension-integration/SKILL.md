@@ -354,3 +354,51 @@ rm -rf ~/.cursor/extensions/[extension-name]/
 cursor --uninstall-extension [id]
 cursor --install-extension [id]
 ```
+
+## Prerequisites
+
+- Cursor IDE installed
+- VS Code marketplace access
+- Understanding of extension compatibility
+- Awareness of potential conflicts with AI features
+
+## Instructions
+
+1. Open Extensions panel (Cmd+Shift+X)
+2. Search for desired extension
+3. Check compatibility and conflict warnings
+4. Install and reload if prompted
+5. Configure extension settings
+6. Disable conflicting AI extensions (Copilot, TabNine)
+
+## Output
+
+- Enhanced Cursor functionality with extensions
+- Configured extension settings
+- Resolved keybinding conflicts
+- Optimized extension performance
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Extension not working | Incompatibility or missing reload | Reload Cursor, check VS Code version compatibility |
+| Completion conflicts | Multiple AI assistants active | Disable Copilot, TabNine, IntelliCode |
+| Keybinding conflicts | Overlapping shortcuts | Rebind in Keyboard Shortcuts (Cmd+K Cmd+S) |
+| High CPU/memory | Heavy extension | Check Process Explorer, disable or remove extension |
+
+## Examples
+
+**Example: Essential Extension Setup**
+Request: "Set up essential extensions for a TypeScript React project"
+Result: Install ESLint, Prettier, Tailwind IntelliSense, and GitLens with proper configuration
+
+**Example: Resolving AI Conflicts**
+Request: "Cursor completions conflict with another AI extension"
+Result: Disable GitHub Copilot and configure Cursor as primary AI provider
+
+## Resources
+
+- [VS Code Marketplace](https://marketplace.visualstudio.com/)
+- [Cursor Extension Compatibility](https://cursor.com/docs/extensions)
+- [Extension Development Guide](https://code.visualstudio.com/api)

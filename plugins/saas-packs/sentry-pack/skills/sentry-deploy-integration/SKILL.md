@@ -203,6 +203,33 @@ View in Sentry Dashboard:
    - Crash rate changes
    - Performance differences
 
+## Prerequisites
+- Sentry CLI installed
+- `SENTRY_AUTH_TOKEN` configured
+- Build pipeline access
+- Source maps generated during build
+
+## Output
+- Releases created for each deployment
+- Source maps uploaded and linked
+- Deployment notifications sent
+- Release health metrics tracked
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Release not found` | Mismatched release names | Ensure SDK release matches CLI release |
+| `Deploy notification failed` | Missing auth token | Verify SENTRY_AUTH_TOKEN is set |
+| `Health metrics empty` | Session tracking disabled | Enable `autoSessionTracking: true` |
+| `Rollback not reflected` | Old release not redeployed | Create new deploy notification for old version |
+
+## Examples
+
+**Example: Vercel Deployment Integration**
+Request: "Set up Sentry for Vercel deployments"
+Result: Vercel integration enabled, automatic releases created, source maps uploaded, deploy tracking active.
+
 ## Resources
 - [Sentry Releases](https://docs.sentry.io/product/releases/)
 - [Release Health](https://docs.sentry.io/product/releases/health/)

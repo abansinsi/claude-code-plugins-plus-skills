@@ -122,3 +122,52 @@ winget install Cursor.Cursor
 - Verify key hasn't expired
 - Check key has correct permissions
 - Ensure correct model access
+
+## Prerequisites
+
+- Supported operating system (macOS, Linux, or Windows)
+- Internet connection for download and authentication
+- Admin rights for installation (if required)
+- Optional: API keys for custom model access
+
+## Instructions
+
+1. Download Cursor from cursor.com or package manager
+2. Install using platform-specific method
+3. Launch Cursor and click "Sign In"
+4. Choose authentication method (GitHub, Google, Email)
+5. Complete OAuth flow in browser
+6. Return to Cursor - automatically authenticated
+
+## Output
+
+- Installed Cursor IDE
+- Authenticated user account
+- Activated license (Free, Pro, or Business)
+- Ready-to-use AI features
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Installation failed | Permissions or disk space | Run as admin, free disk space |
+| Authentication failed | Browser or network issue | Clear cookies, try different auth method |
+| License not found | Account not synced | Sign out and back in, verify subscription |
+| API key invalid | Expired or wrong format | Regenerate key, check permissions |
+
+## Examples
+
+**Example: macOS Installation**
+Request: "Install Cursor on macOS"
+Result: Download DMG, drag to Applications, launch and sign in
+
+**Example: Linux Installation**
+Request: "Install Cursor on Ubuntu"
+Result: Download AppImage, chmod +x, run and authenticate
+
+## Resources
+
+- [Cursor Download](https://cursor.com/download)
+- [System Requirements](https://cursor.com/docs/requirements)
+- [Cursor Pricing](https://cursor.com/pricing)
+- [Account Settings](https://cursor.com/settings)

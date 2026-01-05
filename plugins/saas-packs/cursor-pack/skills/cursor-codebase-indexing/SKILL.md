@@ -339,3 +339,52 @@ When issues occur:
 - Clear and rebuild index
 - Check exclusion patterns
 ```
+
+## Prerequisites
+
+- Cursor IDE installed and authenticated
+- Project workspace with source files
+- Sufficient disk space for index storage
+- Stable network connection for initial setup
+
+## Instructions
+
+1. Open your project in Cursor
+2. Navigate to Settings > Cursor > Codebase Indexing
+3. Enable "Index this workspace"
+4. Create `.cursorignore` file at project root
+5. Add exclusion patterns for large/irrelevant directories
+6. Wait for indexing to complete (check status bar)
+7. Test with `@codebase` queries in chat
+
+## Output
+
+- Indexed codebase enabling `@codebase` queries
+- Semantic code search functionality
+- Improved AI context awareness
+- Searchable symbol table and definitions
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Indexing never completes | Large files or circular symlinks | Add exclusions to `.cursorignore` |
+| @codebase returns nothing | Indexing incomplete or file excluded | Check status bar and exclusion patterns |
+| High CPU during indexing | Too many workers or large codebase | Reduce worker count in settings |
+| Index outdated | File watcher not triggering | Run manual refresh via Command Palette |
+
+## Examples
+
+**Example: Setting Up for a Node.js Project**
+Request: "Configure codebase indexing for my Node.js project"
+Result: Creates `.cursorignore` excluding node_modules, dist, and build directories; enables indexed search
+
+**Example: Monorepo Selective Indexing**
+Request: "Only index the frontend package in my monorepo"
+Result: Configures exclusions for all packages except frontend, reduces index time and improves relevance
+
+## Resources
+
+- [Cursor Indexing Documentation](https://cursor.com/docs/indexing)
+- [gitignore Pattern Syntax](https://git-scm.com/docs/gitignore)
+- [Cursor Performance Guide](https://cursor.com/docs/performance)

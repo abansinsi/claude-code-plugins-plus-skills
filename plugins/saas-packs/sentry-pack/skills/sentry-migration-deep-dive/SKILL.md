@@ -285,6 +285,33 @@ unset ROLLBAR_ACCESS_TOKEN
 unset BUGSNAG_API_KEY
 ```
 
+## Prerequisites
+- Current error tracking tool access
+- Sentry project created
+- API access to old tool (for data export)
+- Parallel run timeline established
+
+## Output
+- SDK migration complete
+- Historical data exported (if needed)
+- Alert rules recreated
+- Team transitioned to Sentry
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Missing errors during migration` | Sampling mismatch | Run both tools at 100% during parallel |
+| `Alert parity issues` | Different alert models | Map alert rules carefully before cutover |
+| `Data export failed` | API rate limits | Use pagination and backoff |
+| `Team unfamiliar with UI` | No training | Schedule Sentry training sessions |
+
+## Examples
+
+**Example: Migrate from Rollbar**
+Request: "Migrate from Rollbar to Sentry for Node.js app"
+Result: SDK replaced, parallel run for 2 weeks, alerts recreated, Rollbar removed after verification.
+
 ## Resources
 - [Sentry Migration Guide](https://docs.sentry.io/product/accounts/migration/)
 - [SDK Documentation](https://docs.sentry.io/platforms/)

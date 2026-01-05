@@ -316,6 +316,33 @@ Sentry.init({
 - [ ] Environment tags
 ```
 
+## Prerequisites
+- Existing Sentry implementation to review
+- Access to SDK configuration
+- Understanding of current error patterns
+- Codebase access for fixes
+
+## Output
+- Pitfalls identified in current setup
+- Fixes applied for each issue
+- Configuration validated
+- Best practices checklist completed
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Duplicate events` | Multiple capture points | Use single error handler with Sentry |
+| `Events missing` | beforeSend returns undefined | Always return event or null explicitly |
+| `High costs` | 100% trace sampling | Set production-appropriate sample rates |
+| `Wrong stack traces` | Release version mismatch | Ensure SDK and CLI use same version |
+
+## Examples
+
+**Example: Review and Fix Pitfalls**
+Request: "Audit our Sentry setup for common mistakes"
+Result: Found late initialization, fixed; found 100% sampling in prod, reduced; found double capture, removed duplicate.
+
 ## Resources
 - [Sentry Best Practices](https://docs.sentry.io/product/issues/best-practices/)
 - [Troubleshooting Guide](https://docs.sentry.io/platforms/javascript/troubleshooting/)

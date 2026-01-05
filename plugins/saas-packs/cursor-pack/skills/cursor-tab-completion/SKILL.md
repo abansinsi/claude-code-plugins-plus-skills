@@ -210,3 +210,51 @@ Always review ghost text:
 - Ensure style consistency
 - Watch for security issues
 ```
+
+## Prerequisites
+
+- Cursor IDE with completions enabled
+- Project with indexed codebase
+- Understanding of ghost text interface
+- Configured .cursorrules for project patterns
+
+## Instructions
+
+1. Start typing code in a file
+2. Wait for ghost text to appear (gray suggestion)
+3. Press Tab to accept full suggestion
+4. Press Ctrl+Right to accept word by word
+5. Press Esc to dismiss unwanted suggestions
+6. Use Ctrl+Space to force trigger completion
+
+## Output
+
+- AI-generated code completions
+- Pattern-aware suggestions
+- Context-sensitive function bodies
+- Consistent code style matching project
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| No completions appearing | Feature disabled or rate limit | Check settings, verify subscription |
+| Poor quality suggestions | Insufficient context | Add comments, type hints, update .cursorrules |
+| Completions too aggressive | Low delay setting | Increase cursor.completion.delay |
+| Wrong language patterns | Incorrect language mode | Check file extension and language mode in status bar |
+
+## Examples
+
+**Example: Function Body Completion**
+Request: Type function signature with descriptive comment
+Result: AI completes entire function body following described intent
+
+**Example: Pattern Continuation**
+Request: Define similar handler after existing ones
+Result: AI continues pattern from previous handlers with correct naming
+
+## Resources
+
+- [Tab Completion Guide](https://cursor.com/docs/completions)
+- [Completion Settings](https://cursor.com/docs/settings)
+- [Context for Better Completions](https://cursor.com/docs/context)

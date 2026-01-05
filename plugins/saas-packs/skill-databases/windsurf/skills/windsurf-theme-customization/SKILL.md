@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Configure visual settings for accessibility and developer comfort.
 
+## Overview
+
+This skill enables comprehensive theme customization within Windsurf. It covers color schemes, font configurations, UI scaling, and accessibility settings. Proper theme configuration reduces eye strain, improves code readability, and ensures compliance with accessibility standards like WCAG 2.1 for team members with visual impairments.
+
+## Prerequisites
+
+- Windsurf IDE installed
+- Understanding of accessibility requirements
+- Color vision considerations for team
+- Preferred font selections
+- Display resolution and scaling needs
+
 ## Directory Structure
 
 ```
@@ -63,22 +75,69 @@ project-root/
 - UI font: System default or accessible choice
 - Font size: Scalable based on preference
 
-## Configuration Steps
+## Instructions
 
 1. **Select Base Theme**
-   - Choose dark or light base
-   - Consider time-of-day switching
+   - Choose dark or light as foundation
+   - Consider time-of-day auto-switching
    - Test with actual code samples
 
-2. **Customize Colors**
-   - Adjust syntax highlighting
-   - Configure UI element colors
-   - Set Cascade panel styling
+2. **Configure Colors**
+   - Adjust syntax highlighting for visibility
+   - Set UI element colors
+   - Configure Cascade panel styling
 
-3. **Verify Accessibility**
-   - Check contrast ratios
+3. **Set Up Fonts**
+   - Choose accessible monospace font
+   - Configure font size and line height
+   - Enable ligatures if desired
+
+4. **Enable Accessibility Features**
+   - Configure screen reader support
+   - Set up keyboard navigation
+   - Enable focus indicators
+
+5. **Verify Compliance**
+   - Check contrast ratios with tools
    - Test keyboard navigation
-   - Validate with accessibility tools
+   - Validate with accessibility checker
+
+## Output
+
+- Customized theme configuration
+- Font settings optimized for readability
+- Accessibility-compliant color scheme
+- Cross-panel consistent styling
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Theme not loading | Invalid JSON syntax | Validate theme file syntax |
+| Colors not applying | Cache issue | Reload Windsurf window |
+| Font not rendering | Font not installed | Install font or choose alternative |
+| Low contrast warning | WCAG violation | Increase contrast ratio |
+| UI elements missing | Theme incomplete | Add missing color definitions |
+
+## Examples
+
+**Example: Create High-Contrast Theme**
+Request: "Set up high-contrast theme for accessibility"
+Result: Theme with WCAG AAA contrast ratios, bold syntax colors
+
+**Example: Configure Dark Theme**
+Request: "Customize dark theme to reduce eye strain"
+Result: Dark theme with reduced blue light, comfortable syntax colors
+
+**Example: Set Up Font Configuration**
+Request: "Configure fonts for dyslexia-friendly reading"
+Result: OpenDyslexic or similar font, increased spacing, clear colors
+
+## Resources
+
+- [Windsurf Theme Guide](https://docs.windsurf.ai/features/themes)
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
+- [Accessible Color Palettes](https://docs.windsurf.ai/guides/accessibility)
 
 ## Success Criteria
 

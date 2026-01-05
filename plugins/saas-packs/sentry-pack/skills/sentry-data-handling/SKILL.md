@@ -265,6 +265,27 @@ describe('Sentry data scrubbing', () => {
 });
 ```
 
+## Output
+- PII scrubbing rules configured
+- GDPR compliance documentation
+- Data retention policies implemented
+- User consent handling code
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `PII still appearing in events` | Scrubbing rules incomplete | Add patterns to `beforeSend` and server-side rules |
+| `User deletion failed` | Invalid user ID | Verify user ID format matches Sentry records |
+| `Data retention not applied` | Plan limitation | Check organization settings and plan features |
+| `Consent tracking broken` | SDK initialized before consent | Use conditional DSN based on consent state |
+
+## Examples
+
+**Example: GDPR-Compliant Setup**
+Request: "Configure Sentry for GDPR compliance"
+Result: PII scrubbing enabled, IP anonymization active, consent-based initialization, data deletion endpoint implemented.
+
 ## Resources
 - [Sentry Data Privacy](https://docs.sentry.io/product/data-management-settings/data-privacy/)
 - [GDPR Compliance](https://sentry.io/legal/gdpr/)

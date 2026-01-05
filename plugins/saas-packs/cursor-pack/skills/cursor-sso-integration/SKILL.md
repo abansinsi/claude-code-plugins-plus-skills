@@ -359,3 +359,55 @@ Before expiry:
 5. Verify all users can login
 6. Remove old certificate
 ```
+
+## Prerequisites
+
+- Cursor Business or Enterprise subscription
+- Admin access to Identity Provider (Okta, Azure AD, etc.)
+- Admin access to Cursor organization
+- Verified company domain in Cursor
+- Understanding of SAML 2.0 or OAuth 2.0/OIDC
+
+## Instructions
+
+1. Verify domain in Cursor Admin
+2. Create SAML application in Identity Provider
+3. Configure ACS URL and Entity ID
+4. Set up attribute mapping (email, name)
+5. Download IdP metadata and upload to Cursor
+6. Test SSO with admin account
+7. Roll out to organization
+
+## Output
+
+- SSO authentication configured
+- SAML/OIDC integration active
+- User provisioning enabled
+- Role mapping configured
+- Security policies enforced
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| SAML Response Invalid | Certificate expired or clock skew | Check certificate, sync time |
+| User Not Authorized | Not assigned in IdP or domain mismatch | Assign user to app, verify domain |
+| Session Timeout | IdP session shorter than expected | Adjust session settings in IdP |
+| Attribute Missing | Incorrect claim mapping | Update attribute statements in IdP |
+
+## Examples
+
+**Example: Okta SSO Setup**
+Request: "Configure Okta SSO for our Cursor organization"
+Result: SAML app created, configured, tested, and deployed to team
+
+**Example: Azure AD Integration**
+Request: "Set up Azure AD SSO with conditional access"
+Result: Enterprise app configured with MFA requirement and device compliance
+
+## Resources
+
+- [Cursor SSO Documentation](https://cursor.com/docs/sso)
+- [SAML 2.0 Specification](https://docs.oasis-open.org/security/saml/v2.0/)
+- [Okta SAML Setup Guide](https://developer.okta.com/docs/guides/saml-application-setup/)
+- [Azure AD Enterprise Apps](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/)

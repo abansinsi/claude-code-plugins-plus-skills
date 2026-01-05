@@ -265,3 +265,52 @@ Not:
 - Multiple unrelated functions
 - Large code blocks "just in case"
 ```
+
+## Prerequisites
+
+- Cursor IDE with AI features active
+- Understanding of context window limits
+- Project with code files
+- Familiarity with @-mention syntax
+
+## Instructions
+
+1. Understand your model's context limit
+2. Select only relevant code before chatting
+3. Use specific @-mentions for file context
+4. Start new conversations for new topics
+5. Monitor response quality for context issues
+6. Clear context when switching tasks
+
+## Output
+
+- Optimized context usage
+- Better AI response quality
+- Faster response times
+- Efficient @-mention patterns
+- Clean conversation management
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Context length exceeded | Too much selected or @-mentioned | Reduce selection, fewer @-mentions |
+| AI forgetting earlier context | Context window overflow | Start new chat, re-state important context |
+| Slow responses | Large context processing | Use smaller context, switch model |
+| Irrelevant suggestions | Context pollution | Start fresh chat, be more specific |
+
+## Examples
+
+**Example: Efficient Debugging Context**
+Request: "Fix TypeError on line 45" with only the relevant function selected
+Result: Fast, accurate fix without context overflow
+
+**Example: Context Priming for Complex Task**
+Request: Start with summary of architecture, then ask specific questions
+Result: AI maintains relevant context throughout conversation
+
+## Resources
+
+- [Context Window Guide](https://cursor.com/docs/context)
+- [Model Context Limits](https://cursor.com/docs/models)
+- [Effective Prompting](https://cursor.com/docs/prompting)

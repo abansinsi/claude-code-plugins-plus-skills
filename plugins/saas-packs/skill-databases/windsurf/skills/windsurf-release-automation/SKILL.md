@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Automate release processes with semantic versioning and changelog generation.
 
+## Overview
+
+This skill enables automated release workflows within Windsurf using Cascade AI. It analyzes commits to determine semantic version bumps, generates comprehensive changelogs, manages Git tags, and publishes releases. Cascade understands conventional commits to automatically categorize changes and highlight breaking changes for proper version increments.
+
+## Prerequisites
+
+- Windsurf IDE with Cascade enabled
+- Git repository with commit history
+- Conventional commits or consistent commit format
+- npm/yarn/pnpm for JavaScript projects (or equivalent)
+- CI/CD pipeline for automated publishing (optional)
+
 ## Directory Structure
 
 ```
@@ -79,22 +91,70 @@ project-root/
 - Breaking change highlighting
 - Contributor attribution
 
-## Configuration Steps
+## Instructions
 
 1. **Configure Version Strategy**
-   - Define commit conventions
-   - Set branch policies
-   - Configure pre-release handling
+   - Define commit type to version mapping
+   - Set branch policies for releases
+   - Configure pre-release handling (alpha, beta, rc)
 
 2. **Set Up Automation**
-   - Install release tools
-   - Configure CI integration
-   - Set up publishing
+   - Install semantic-release or equivalent
+   - Configure CI/CD integration
+   - Set up publishing credentials
 
-3. **Execute Release**
+3. **Prepare Release**
+   - Review commits since last release
+   - Cascade analyzes and suggests version bump
+   - Generate changelog preview
+
+4. **Execute Release**
    - Trigger release workflow
    - Review generated changelog
    - Verify published artifacts
+
+5. **Post-Release Tasks**
+   - Merge release branch if applicable
+   - Announce release to stakeholders
+   - Monitor for post-release issues
+
+## Output
+
+- Updated version in package.json
+- Generated CHANGELOG.md entry
+- Git tag for release version
+- Published package to registry
+- Release notes for distribution
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Version calculation failed | No conventional commits | Add feat/fix prefixes to commits |
+| Changelog generation empty | No changes since last release | Verify commit range, check for tags |
+| Publish failed | Auth or permission issue | Check registry credentials |
+| Tag already exists | Duplicate version | Delete tag and bump version |
+| Breaking change missed | Commit not marked | Add BREAKING CHANGE footer |
+
+## Examples
+
+**Example: Determine Version Bump**
+Request: "What version should this release be?"
+Result: Cascade analyzes commits, recommends minor bump (1.2.0 -> 1.3.0) based on feat commits
+
+**Example: Generate Changelog**
+Request: "Generate changelog for upcoming release"
+Result: Formatted changelog with features, fixes, breaking changes, and contributors
+
+**Example: Execute Full Release**
+Request: "Release version 2.0.0 with changelog"
+Result: Version bumped, changelog generated, tag created, package published
+
+## Resources
+
+- [Windsurf Release Automation](https://docs.windsurf.ai/features/release)
+- [Semantic Release Documentation](https://semantic-release.gitbook.io/)
+- [Conventional Commits](https://www.conventionalcommits.org/)
 
 ## Success Criteria
 

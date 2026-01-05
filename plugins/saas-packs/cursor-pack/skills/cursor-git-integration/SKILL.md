@@ -316,3 +316,52 @@ Visual branch management:
 - Branch/tag visualization
 - Easy cherry-pick/rebase
 ```
+
+## Prerequisites
+
+- Git installed and configured
+- Project initialized as git repository
+- Cursor IDE with Git extension enabled
+- Basic understanding of Git workflows
+
+## Instructions
+
+1. Open your git repository in Cursor
+2. Access Source Control panel (Cmd+Shift+G)
+3. Stage changes by clicking + on files
+4. Use AI to generate commit messages
+5. Push changes to remote repository
+6. Use @git in chat for AI-assisted reviews
+
+## Output
+
+- Integrated Git workflow in Cursor
+- AI-generated commit messages
+- AI-assisted code review
+- Streamlined branch management
+- Conflict resolution assistance
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Git not detected | Git not installed or not in PATH | Install Git and restart Cursor |
+| Cannot push | Remote conflict or auth issue | Pull first, check SSH/HTTPS credentials |
+| Merge conflicts | Divergent branches | Use AI to help resolve conflicts |
+| Commit rejected | Pre-commit hook failure | Fix hook issues, run lint/tests manually |
+
+## Examples
+
+**Example: AI-Generated Commit Message**
+Request: "Generate a commit message for my staged changes"
+Result: Cursor analyzes diff and generates semantic commit message following conventions
+
+**Example: Resolving Merge Conflict with AI**
+Request: "Help resolve this merge conflict keeping the new auth logic"
+Result: AI analyzes both versions and suggests merged code preserving specified logic
+
+## Resources
+
+- [Git Documentation](https://git-scm.com/doc)
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [GitLens Extension](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)

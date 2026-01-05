@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Configure Cascade AI agent for optimal team productivity from day one.
 
+## Overview
+
+This skill enables rapid onboarding of projects to Windsurf with optimized Cascade AI configuration. It covers creating .windsurfrules, setting up project context, configuring team defaults, and establishing best practices for AI-assisted development. Teams can achieve maximum Cascade productivity within the first week of adoption.
+
+## Prerequisites
+
+- Windsurf IDE installed for all team members
+- Active Cascade AI subscription
+- Project documentation (architecture, conventions)
+- Team lead or admin access for configuration
+- Understanding of project structure and patterns
+
 ## Directory Structure
 
 ```
@@ -56,22 +68,69 @@ project-root/
             # Troubleshooting common issues
 ```
 
-## Configuration Steps
+## Instructions
 
 1. **Initialize Windsurf Rules**
-   - Create `.windsurfrules` with project conventions
-   - Define code style and framework preferences
-   - Set up language-specific instructions
+   - Create `.windsurfrules` file in project root
+   - Define project language and framework preferences
+   - Set up code style and naming conventions
 
 2. **Configure Cascade Context**
-   - Add project architecture documentation
-   - Define key patterns and conventions
-   - Include dependency documentation
+   - Write project architecture documentation
+   - Document key patterns and conventions
+   - Include dependency documentation and purposes
 
 3. **Set Up Team Defaults**
-   - Configure shared snippets
-   - Establish prompt templates
-   - Document best practices
+   - Configure shared snippets library
+   - Establish prompt templates for common tasks
+   - Document best practices for Cascade usage
+
+4. **Train Team Members**
+   - Share windsurf-guide.md with team
+   - Conduct onboarding sessions
+   - Establish feedback channels for improvements
+
+5. **Iterate Based on Feedback**
+   - Collect team feedback weekly
+   - Refine context and rules
+   - Update documentation continuously
+
+## Output
+
+- Configured .windsurfrules file
+- Project context documentation
+- Team snippet library
+- Onboarding guide for new members
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Cascade not understanding project | Missing context | Add more project documentation to context/ |
+| Inconsistent code style | Rules not specific enough | Expand .windsurfrules with specific patterns |
+| Slow response times | Too much context loaded | Prioritize essential context, remove redundant |
+| Team confusion | Inadequate training | Update guide, conduct additional training |
+| Context not persisting | Configuration issue | Check cascade-config.json settings |
+
+## Examples
+
+**Example: Set Up React Project**
+Request: "Configure Cascade for our React TypeScript project"
+Result: .windsurfrules with React patterns, component templates, and styling conventions
+
+**Example: Configure Python ML Project**
+Request: "Onboard our machine learning project to Windsurf"
+Result: Context with ML patterns, Jupyter integration, and data science conventions
+
+**Example: Enterprise Backend Setup**
+Request: "Set up Windsurf for our Java Spring Boot microservices"
+Result: Service patterns, API conventions, and enterprise architecture context
+
+## Resources
+
+- [Windsurf Onboarding Guide](https://docs.windsurf.ai/getting-started/onboarding)
+- [Writing Effective .windsurfrules](https://docs.windsurf.ai/features/windsurfrules)
+- [Team Best Practices](https://docs.windsurf.ai/guides/team-best-practices)
 
 ## Success Criteria
 

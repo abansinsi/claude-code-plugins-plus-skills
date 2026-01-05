@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Manage Windsurf licenses and optimize seat allocation for cost efficiency.
 
+## Overview
+
+This skill enables enterprise license management for Windsurf deployments. It covers seat allocation, usage tracking, cost optimization, and compliance reporting. Administrators can provision new users, reclaim inactive seats, analyze utilization patterns, and optimize subscription tiers based on actual usage data.
+
+## Prerequisites
+
+- Windsurf Enterprise subscription with admin access
+- Organization administrator role
+- Access to billing portal
+- User directory integration (optional: SCIM, Azure AD, Okta)
+- Understanding of organization structure and teams
+
 ## Directory Structure
 
 ```
@@ -85,22 +97,69 @@ organization-config/
 - Tier optimization
 - Budget forecasting
 
-## Configuration Steps
+## Instructions
 
 1. **Inventory Current Licenses**
-   - Document allocations
-   - Identify inactive users
-   - Map to cost centers
+   - Export current seat allocations
+   - Identify inactive users (no activity 30+ days)
+   - Map licenses to cost centers or departments
 
 2. **Set Allocation Policies**
-   - Define eligibility criteria
-   - Configure auto-provisioning
-   - Set reclamation rules
+   - Define eligibility criteria for seat assignment
+   - Configure auto-provisioning rules
+   - Set reclamation thresholds and grace periods
 
-3. **Optimize and Monitor**
+3. **Configure Usage Tracking**
+   - Enable activity monitoring
+   - Set up utilization reports
+   - Configure alerts for low usage
+
+4. **Optimize Subscription**
    - Review utilization reports
    - Reclaim unused seats
-   - Right-size subscription
+   - Right-size subscription tier
+
+5. **Monitor and Report**
+   - Schedule regular utilization reports
+   - Track cost per active user
+   - Report to stakeholders monthly
+
+## Output
+
+- License inventory with current allocations
+- Utilization reports with recommendations
+- Cost analysis with optimization opportunities
+- Compliance reports for audits
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Seat assignment failed | No available seats | Reclaim inactive seats or upgrade plan |
+| User not found | SCIM sync issue | Verify directory integration |
+| Reclamation blocked | User in grace period | Wait for grace period or override |
+| Report generation failed | Missing data | Check activity tracking enabled |
+| Billing discrepancy | Seat count mismatch | Reconcile with billing portal |
+
+## Examples
+
+**Example: Provision New Team**
+Request: "Add 10 seats for the new mobile development team"
+Result: Seats allocated, users provisioned, cost center assigned
+
+**Example: Reclaim Inactive Seats**
+Request: "Identify and reclaim seats inactive for more than 60 days"
+Result: 15 seats identified, notifications sent, seats reclaimed after grace period
+
+**Example: Generate Cost Report**
+Request: "Create monthly license utilization report for finance"
+Result: Report with active users, cost per user, and optimization recommendations
+
+## Resources
+
+- [Windsurf License Administration](https://docs.windsurf.ai/admin/licensing)
+- [SCIM Integration Guide](https://docs.windsurf.ai/admin/scim)
+- [Cost Optimization Best Practices](https://docs.windsurf.ai/admin/cost-optimization)
 
 ## Success Criteria
 

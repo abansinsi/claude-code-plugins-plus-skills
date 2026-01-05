@@ -338,3 +338,52 @@ Quarterly:
    - Improve processes
    - Notify stakeholders if required
 ```
+
+## Prerequisites
+
+- Cursor IDE with admin access to settings
+- Understanding of data handling requirements
+- Knowledge of sensitive files in project
+- Compliance requirements documented
+
+## Instructions
+
+1. Evaluate privacy mode needs (per project/globally)
+2. Configure .cursorignore for sensitive files
+3. Set up environment variables for secrets
+4. Configure telemetry settings
+5. Verify API key security
+6. Document data handling policies
+
+## Output
+
+- Privacy Mode configured appropriately
+- Sensitive files excluded from AI context
+- Secure API key management
+- Telemetry settings aligned with policy
+- Documented privacy configuration
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Privacy Mode limits features | Mode enabled globally | Use per-workspace settings |
+| Secrets still in context | File not in .cursorignore | Add file pattern to exclusions |
+| Telemetry still sending | Settings not applied | Verify telemetry.telemetryLevel is "off" |
+| API key exposed | Hardcoded in settings | Use environment variables |
+
+## Examples
+
+**Example: Configure for Sensitive Project**
+Request: "Set up Cursor privacy for a healthcare application"
+Result: Privacy Mode enabled, PHI files excluded, audit logging configured
+
+**Example: API Key Security Setup**
+Request: "Secure my OpenAI API key configuration"
+Result: Key moved to environment variable, file permissions restricted
+
+## Resources
+
+- [Cursor Privacy Policy](https://cursor.com/privacy)
+- [Data Handling Documentation](https://cursor.com/docs/privacy)
+- [Security Best Practices](https://cursor.com/security)

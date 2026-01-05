@@ -326,3 +326,51 @@ Solutions:
 - Add explicit context
 - Reference specific patterns
 ```
+
+## Prerequisites
+
+- Multiple repositories or monorepo structure
+- Understanding of workspace concepts
+- Cursor IDE with workspace support
+- Configured .cursorrules for each project
+
+## Instructions
+
+1. Decide on multi-repo strategy (separate windows, workspace, or monorepo)
+2. Create workspace file or open specific packages
+3. Configure .cursorrules inheritance (root + overrides)
+4. Set up selective indexing with .cursorignore
+5. Use full paths for @-mentions across projects
+6. Test cross-project context and queries
+
+## Output
+
+- Functional multi-repository workspace
+- Properly inherited .cursorrules
+- Selective indexing per project
+- Cross-project AI context awareness
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Can't find file | Wrong path or not indexed | Use full path, check .cursorignore |
+| Context too large | Entire monorepo loaded | Open single project or add exclusions |
+| Inconsistent suggestions | Conflicting rules between projects | Verify .cursorrules inheritance |
+| Slow performance | Too many files indexed | Aggressive .cursorignore for inactive packages |
+
+## Examples
+
+**Example: Multi-Root Workspace Setup**
+Request: "Set up workspace with frontend, backend, and shared packages"
+Result: workspace.code-workspace file with folder configurations and shared settings
+
+**Example: Monorepo Selective Indexing**
+Request: "Only index the packages I'm actively working on"
+Result: .cursorignore configured to exclude all packages except active ones
+
+## Resources
+
+- [VS Code Workspaces](https://code.visualstudio.com/docs/editor/workspaces)
+- [Turborepo Documentation](https://turbo.build/repo/docs)
+- [Cursor Multi-Project Guide](https://cursor.com/docs/workspaces)

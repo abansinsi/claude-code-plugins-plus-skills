@@ -122,3 +122,51 @@ After completing hello world:
 2. Set up codebase indexing for large projects
 3. Customize keybindings
 4. Explore extensions compatibility
+
+## Prerequisites
+
+- Cursor IDE installed (from cursor.com)
+- Account created and authenticated
+- Basic programming knowledge
+- Project folder ready
+
+## Instructions
+
+1. Create new project folder and open in Cursor
+2. Create a new file and start typing code
+3. Accept AI suggestions with Tab key
+4. Try AI Chat (Cmd+L) with a question
+5. Try Composer (Cmd+I) for multi-file generation
+6. Explore inline edit (Cmd+K) for quick fixes
+
+## Output
+
+- Working Cursor installation
+- First AI-generated code
+- Understanding of core features
+- Foundation for advanced usage
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| No suggestions appearing | Not signed in or rate limited | Sign in, check subscription status |
+| Chat not responding | Network or rate limit | Check connection, wait for reset |
+| Commands not working | Keybinding conflicts | Check Keyboard Shortcuts (Cmd+K Cmd+S) |
+| Installation issues | System requirements | Check cursor.com for requirements |
+
+## Examples
+
+**Example: First Tab Completion**
+Request: Type "def fibonacci(" and wait for suggestion
+Result: AI completes function with fibonacci implementation
+
+**Example: First Chat Question**
+Request: Press Cmd+L and ask "How do I sort a list in Python?"
+Result: AI explains list sorting with examples
+
+## Resources
+
+- [Cursor Getting Started](https://cursor.com/docs/getting-started)
+- [Cursor Tutorial Videos](https://cursor.com/learn)
+- [Cursor Discord Community](https://discord.gg/cursor)

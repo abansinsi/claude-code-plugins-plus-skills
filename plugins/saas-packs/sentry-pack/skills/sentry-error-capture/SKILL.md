@@ -192,6 +192,15 @@ with capture_errors('sync_users', batch_size=100):
     sync_all_users()
 ```
 
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Missing event ID` | Capture failed silently | Enable `debug: true` to see SDK logs |
+| `User context not appearing` | User set after capture | Call `setUser()` before `captureException()` |
+| `Tags not filterable` | Invalid tag format | Use string values only, no nested objects |
+| `Breadcrumbs missing` | Integration disabled | Verify Breadcrumbs integration is enabled |
+
 ## Resources
 - [Sentry Enriching Events](https://docs.sentry.io/platforms/javascript/enriching-events/)
 - [Sentry Scopes](https://docs.sentry.io/platforms/javascript/enriching-events/scopes/)

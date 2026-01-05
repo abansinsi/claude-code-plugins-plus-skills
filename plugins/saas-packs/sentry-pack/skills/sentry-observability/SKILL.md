@@ -235,6 +235,33 @@ actions:
 4. **Add context links** in alert messages
 5. **Use Sentry for errors**, APM for performance, logs for debugging
 
+## Prerequisites
+- Existing observability stack (logging, metrics, APM)
+- Trace ID correlation strategy
+- Dashboard platform (Grafana, Datadog, etc.)
+- Alert routing defined
+
+## Output
+- Sentry integrated with logging system
+- Metrics correlated with error events
+- Distributed traces connected across tools
+- Unified observability dashboard
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `Trace IDs not correlating` | Missing tag propagation | Add trace_id tag in beforeSend |
+| `Duplicate alerts` | Multiple tools alerting | Route all alerts through single source |
+| `Dashboard data missing` | API permissions issue | Verify Sentry API token has read access |
+| `Log correlation broken` | Request ID not set | Set request_id tag in Sentry scope |
+
+## Examples
+
+**Example: Datadog + Sentry Integration**
+Request: "Correlate Sentry errors with Datadog APM traces"
+Result: beforeSend adds Datadog trace_id and span_id tags, enabling click-through from Sentry to Datadog.
+
 ## Resources
 - [Sentry Integrations](https://docs.sentry.io/product/integrations/)
 - [OpenTelemetry Integration](https://docs.sentry.io/platforms/javascript/performance/instrumentation/opentelemetry/)

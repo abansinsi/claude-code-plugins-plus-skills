@@ -352,3 +352,52 @@ Understand data flow:
 - Privacy mode for sensitive code
 - Audit trail available
 ```
+
+## Prerequisites
+
+- Cursor Business or Enterprise subscription
+- Admin access to Cursor organization
+- Team roster and role assignments planned
+- Billing and payment method configured
+
+## Instructions
+
+1. Create team at cursor.com/settings/team
+2. Configure team plan and billing
+3. Invite team members with appropriate roles
+4. Set up shared .cursorrules in repository
+5. Configure team analytics and usage tracking
+6. Create onboarding documentation
+
+## Output
+
+- Configured team account with all members
+- Role-based access control
+- Shared configuration and standards
+- Usage analytics and cost tracking
+- Onboarding process documented
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Invitation not received | Email filtering or wrong address | Resend invite, check spam folder |
+| Cannot assign role | Insufficient permissions | Contact organization owner |
+| Usage over budget | Unexpected usage patterns | Review analytics, set usage guidelines |
+| SSO not working | Configuration mismatch | Verify IdP settings match Cursor config |
+
+## Examples
+
+**Example: Small Team Setup**
+Request: "Set up Cursor for a 10-person engineering team"
+Result: Team created with roles, shared configuration, and onboarding guide
+
+**Example: Onboarding New Developer**
+Request: "Onboard new team member to our Cursor setup"
+Result: Complete checklist from invitation to verified working setup
+
+## Resources
+
+- [Cursor Team Documentation](https://cursor.com/docs/teams)
+- [Admin Dashboard Guide](https://cursor.com/docs/admin)
+- [Team Best Practices](https://cursor.com/blog/teams)

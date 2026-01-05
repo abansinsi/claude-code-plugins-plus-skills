@@ -346,3 +346,53 @@ HIPAA/PCI/SOC2:
 - Access controls
 - Incident procedures
 ```
+
+## Prerequisites
+
+- Cursor IDE Pro or Business subscription (or own API keys)
+- API account with OpenAI, Anthropic, Azure, or Google
+- API key with appropriate permissions and credits
+- Secure storage solution for credentials
+
+## Instructions
+
+1. Generate API key from your chosen provider
+2. Open Cursor Settings (Cmd+,)
+3. Search for "Cursor API"
+4. Enter your API key in the appropriate field
+5. Set file permissions to restrict access
+6. Configure billing alerts on provider dashboard
+7. Test API key by making a request in Cursor
+
+## Output
+
+- Custom API key configured in Cursor
+- Bypass of Cursor rate limits
+- Direct billing relationship with provider
+- Access to specific models via your key
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Invalid API Key | Key expired or miscopied | Verify key format and regenerate if needed |
+| Rate Limited | Exceeded tier limits | Wait for reset or upgrade API plan |
+| Model Not Available | Model requires special access | Check provider dashboard for model access |
+| Insufficient Quota | No credits or billing not set | Add payment method to API account |
+
+## Examples
+
+**Example: Configure OpenAI API Key**
+Request: "Set up my OpenAI API key for Cursor"
+Result: OpenAI key configured in settings, GPT-4 models accessible via personal key
+
+**Example: Rotate Expired API Keys**
+Request: "Help me rotate my Anthropic API key"
+Result: New key generated, updated in Cursor settings, old key revoked
+
+## Resources
+
+- [OpenAI API Keys](https://platform.openai.com/api-keys)
+- [Anthropic Console](https://console.anthropic.com/)
+- [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
+- [Cursor Security Documentation](https://cursor.com/security)

@@ -149,3 +149,52 @@ git add -A
 - Terminal runs in background
 - Tests can run while coding
 - Use split views effectively
+
+## Prerequisites
+
+- Cursor IDE installed and configured
+- Project with development environment set up
+- Git repository initialized
+- Basic familiarity with Cursor AI features
+
+## Instructions
+
+1. Open project and let indexing complete
+2. Review recent changes with git diff
+3. Use Chat (Cmd+L) for planning and architecture
+4. Use Composer (Cmd+I) for multi-file scaffolding
+5. Use Tab completion for implementation
+6. Use Inline Edit (Cmd+K) for quick fixes
+7. Commit with AI-generated messages
+
+## Output
+
+- Efficient keyboard-driven workflow
+- AI-assisted feature development
+- Streamlined git integration
+- Rapid iteration cycle
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Slow AI responses | Network or model choice | Switch to faster model, check connection |
+| Lost context mid-task | Long conversation or topic switch | Start new chat, re-state context |
+| Completions not matching | .cursorrules outdated | Update rules with current patterns |
+| Performance issues | Too many open files | Close unused tabs, restart Cursor |
+
+## Examples
+
+**Example: Morning Development Startup**
+Request: "Summarize recent changes and what needs work today"
+Result: AI provides summary of git diff and identifies next steps
+
+**Example: TDD Workflow**
+Request: Write test first, then "Implement function to pass this test"
+Result: AI generates implementation matching test requirements
+
+## Resources
+
+- [Cursor Workflow Guide](https://cursor.com/docs/workflow)
+- [Keyboard Shortcuts Reference](https://cursor.com/docs/shortcuts)
+- [Developer Productivity Tips](https://cursor.com/blog/productivity)

@@ -14,6 +14,18 @@ author: "Jeremy Longshore <jeremy@intentsolutions.io>"
 
 Initialize and configure Windsurf workspace for consistent AI-assisted development.
 
+## Overview
+
+This skill enables rapid workspace setup for Windsurf projects. It covers creating .windsurfrules for AI behavior, configuring editor settings, establishing team conventions, and setting up multi-root workspaces. Proper workspace setup ensures consistent AI assistance across all team members and projects.
+
+## Prerequisites
+
+- Windsurf IDE installed
+- Project repository cloned
+- Understanding of project architecture
+- Team conventions documented
+- Admin access for team-wide settings (optional)
+
 ## Directory Structure
 
 ```
@@ -51,22 +63,70 @@ project-root/
         # Task and launch configurations
 ```
 
-## Configuration Steps
+## Instructions
 
 1. **Create .windsurfrules**
    - Define project language and framework
    - Set coding style preferences
    - Configure AI behavior guidelines
 
-2. **Set Up Workspace Settings**
-   - Configure editor preferences
-   - Install recommended extensions
-   - Set up debugging configurations
+2. **Configure Editor Settings**
+   - Set up formatter and linter settings
+   - Configure language-specific options
+   - Enable productivity features
 
-3. **Establish Team Standards**
+3. **Set Up Extensions**
+   - Install required extensions
+   - Document recommended extensions
+   - Configure extension settings
+
+4. **Configure Cross-Editor Consistency**
+   - Create .editorconfig file
+   - Set up .gitattributes
+   - Document encoding standards
+
+5. **Establish Team Standards**
    - Document configuration decisions
    - Create onboarding checklist
    - Set up validation scripts
+
+## Output
+
+- Configured .windsurfrules file
+- Editor settings.json
+- Extension recommendations
+- Cross-editor configuration files
+- Workspace configuration for monorepos
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| YAML syntax error | Invalid .windsurfrules | Validate YAML syntax, check indentation |
+| Extension conflict | Incompatible extensions | Disable conflicting extension |
+| Settings not applied | JSON syntax error | Validate settings.json syntax |
+| Inconsistent formatting | Missing .editorconfig | Create .editorconfig with team rules |
+| Workspace not loading | Invalid .code-workspace | Check JSON syntax and folder paths |
+
+## Examples
+
+**Example: Set Up TypeScript Project**
+Request: "Initialize Windsurf workspace for TypeScript Node.js project"
+Result: .windsurfrules with TypeScript patterns, settings.json with ESLint/Prettier config
+
+**Example: Configure Monorepo Workspace**
+Request: "Set up multi-root workspace for our monorepo"
+Result: workspace.code-workspace with folder mappings and shared settings
+
+**Example: Migrate from VS Code**
+Request: "Migrate our VS Code setup to Windsurf"
+Result: Settings copied, extensions mapped, .windsurfrules created from conventions
+
+## Resources
+
+- [Windsurf Workspace Guide](https://docs.windsurf.ai/features/workspace)
+- [.windsurfrules Reference](https://docs.windsurf.ai/reference/windsurfrules)
+- [Multi-Root Workspaces](https://docs.windsurf.ai/features/multi-root)
 
 ## Success Criteria
 

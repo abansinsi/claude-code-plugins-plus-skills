@@ -158,3 +158,51 @@ Settings > Extensions > Vim
 │  Multi-Sel:   Cmd+D   │  Move Line:   Alt+Up/Down  │
 └─────────────────────────────────────────────────────┘
 ```
+
+## Prerequisites
+
+- Cursor IDE installed
+- Access to Keyboard Shortcuts editor
+- Understanding of modifier keys (Cmd/Ctrl, Alt/Option, Shift)
+- Optional: Vim mode extension if using Vim bindings
+
+## Instructions
+
+1. Open Keyboard Shortcuts (Cmd+K Cmd+S)
+2. Search for the command to rebind
+3. Click the pencil icon to edit
+4. Press your new key combination
+5. Resolve any conflicts shown
+6. Save and test the new binding
+
+## Output
+
+- Customized keyboard shortcuts
+- Resolved keybinding conflicts
+- Vim mode compatibility (if configured)
+- Personalized workflow efficiency
+
+## Error Handling
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Shortcut not working | Conflict with extension or system | Check for conflicts in Keyboard Shortcuts |
+| Wrong action triggered | Multiple bindings on same key | Remove conflicting bindings |
+| Vim mode conflicts | Vim captures Cursor shortcuts | Configure vim.handleKeys to exclude Cursor keys |
+| System shortcut override | macOS/Windows intercepts key | Change system shortcut or use different binding |
+
+## Examples
+
+**Example: Custom Chat Shortcut**
+Request: "Change AI chat shortcut from Cmd+L to Cmd+Shift+C"
+Result: New keybinding added in keybindings.json for cursor.newChat
+
+**Example: Vim Mode Configuration**
+Request: "Use Vim mode but keep Cursor AI shortcuts working"
+Result: Configure vim.handleKeys to pass through Cmd+L, Cmd+K, and Cmd+I
+
+## Resources
+
+- [VS Code Key Bindings](https://code.visualstudio.com/docs/getstarted/keybindings)
+- [Cursor Keyboard Shortcuts](https://cursor.com/docs/shortcuts)
+- [Vim Extension Configuration](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
