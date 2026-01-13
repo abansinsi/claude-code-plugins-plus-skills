@@ -5612,7 +5612,8 @@
       },
       "components": {
         "commands": 1
-      }
+      },
+      "featured": true
     }
   ]
 }
