@@ -102,9 +102,3 @@ marketplace/.firebase/
 .firebase/
 **/skills/*/data/
 
-# Trading/signal crypto plugins (exclude from public repo)
-plugins/crypto/arbitrage-opportunity-finder/
-plugins/crypto/crypto-derivatives-tracker/
-plugins/crypto/crypto-signal-generator/
-plugins/crypto/options-flow-analyzer/
-plugins/crypto/trading-strategy-backtester/
